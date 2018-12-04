@@ -1,17 +1,21 @@
-<div class="login-block" ng-app="validationApp" ng-controller="mainController">
+<div class="login-block">
   <div class="container">
     <div class="row">
       <div class="col-md-4 login-sec">
         <h2 class="text-center">Entrar</h2>
-        <form class="login-form" ng-submit="submitForm(userForm.$valid)">
-          <div class="form-group">
-            <label for="exampleInputEmail1" class="text-uppercase">Nome de Usúario</label>
-            <input type="text" class="form-control" placeholder="">
-
+        <form class="login-form">
+          <div class="form-group" [ngClass]="{'has-error': !user.valid}">
+            <label for="userName" class="text-uppercase">Nome de Usúario</label>
+            <input type="text" class="form-control" id="userName" placeholder="" name="userName" [(ngModel)]="userName" #user="ngModel"
+              required>
+            <div *ngIf="user.errors">
+              {{user.errors.required}}
+            </div>
           </div>
+
           <div class="form-group">
             <label for="exampleInputPassword1" class="text-uppercase">Senha</label>
-            <input type="password" class="form-control" placeholder="">
+            <input type="password" class="form-control" placeholder="" name="password" [(ngModel)]="password">
           </div>
           <div class="form-check">
             <button type="submit" class="btn btn-login float-right">Entrar</button>
