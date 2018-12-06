@@ -310,7 +310,46 @@ html { height: 100%;}
     margin-left: 20px;
 }
 
-.fa-graduation-cap {
+.text {
     position: relative;
-    right: 4px;
+    left: 10px;
+}
+
+.textEspec {
+    position: relative;
+    left: 3px;
+}
+
+.textNec {
+    position: relative;
+    left: 6px;
+}
+
+.textDoa {
+    position: relative;
+    left: 8px;
+}
+
+.textVou {
+    position: relative;
+    left: 6px;
+}
+
+.textConf {
+    position: relative;
+    left: 7px;
+}
+
+.fa-chevron-down {
+    float: right;
+    font-size: 10px;
+    margin-top: 6.4px;
+    margin-right: 5px;
+}
+
+.fa-chevron-down::after {
+    float: right;
+    font-size: 10px;
+    margin-top: 6.4px;
+    margin-right: 5px;
 }
