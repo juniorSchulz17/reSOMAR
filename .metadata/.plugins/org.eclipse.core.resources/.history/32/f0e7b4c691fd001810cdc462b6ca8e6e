@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link style="text/css" href="login.css"/>
+</head>
+<body>
+<div class="login-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 login-sec">
+        <h2 class="text-center">Entrar</h2>
+        <form class="login-form" #myForm = "ngForm">
+          <div class="form-group" [ngClass]="{'has-error': !user.valid && (user.dirty || user.touched)}">
+            <label for="userName" class="text-uppercase">Nome de Usuário</label>
+            <input type="text" class="form-control" id="userName" placeholder="" name="userName" [(ngModel)]="userName"
+              #user="ngModel" required>
+            <span class="help-block" *ngIf="user.errors && (user.dirty || user.touched)">
+              <ul>
+                <li *ngIf="user.errors.required">
+                  Campo obrigatório
+                </li>
+              </ul>
+            </span>
+          </div>
+
+          <div class="form-group" [ngClass]="{'has-error': !pass.valid && (pass.dirty || pass.touched)}">
+            <label for="exampleInputPassword1" class="text-uppercase">Senha</label>
+            <input type="password" class="form-control" placeholder="" name="password" [(ngModel)]="password" #pass="ngModel"
+              required>
+            <span class="help-block" *ngIf="pass.errors && (pass.dirty || pass.touched)">
+              <ul>
+                <li *ngIf="pass.errors.required">
+                  Campo obrigatório
+                </li>
+              </ul>
+            </span>
+          </div>
+          <div class="form-check">
+            <button type="submit" class="btn btn-login float-right" [disabled]="!myForm.valid">Entrar</button>
+
+            <button type="button" class="btn btn-login float-right btnParticipation">Quero Participar</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-8 banner-sec">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block img-fluid" src="assets/images/background-login.jpg" alt="First slide">
+              <div class="banner-text">
+                <h2>Projeto ReSOMAR</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
