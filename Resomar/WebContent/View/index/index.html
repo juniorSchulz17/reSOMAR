@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8">
 
 <link rel="stylesheet" href="../../assets/css/bootstrap-3.3.0.css"/>
-
 <link rel="stylesheet" href="../../assets/css/fontawesome.css"/>
-<link rel="stylesheet" href="home.css"/>
+<link rel="stylesheet" href="../home/home.css"/>
+<link rel="stylesheet" href="../login/login.css"/>
+
+<link rel="stylesheet" href="../../templates/menu/menu.css"/>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
 <script type="text/javascript" src="../../assets/js/angular.js"></script>
+<script type="text/javascript" src="../../assets/js/angular-route.js"></script>
 <script type="text/javascript" src="../../assets/js/jquery-3.2.1.js"></script>
 <script type="text/javascript" src="../../assets/js/popper.js"></script>
 <script type="text/javascript" src="../../assets/js/inicio.js"></script>
@@ -20,7 +22,9 @@
 <script type="text/javascript" src="../../modulos/app.js"></script>
 
 </head>
-<body ng-app="">
+<body>
 <ng-include src="'../../templates/menu/menu.html'"></ng-include>
+
+<div ng-view></div>
 </body>
 </html>
