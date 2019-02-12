@@ -41,6 +41,11 @@
 body {
   font-size: 0.9rem;
 }
+
+ng-include.ng-scope {
+	position: absolute;
+}
+
 .page-wrapper .sidebar-wrapper,
 .sidebar-wrapper .sidebar-brand > a,
 .sidebar-wrapper .sidebar-dropdown > a:after,
