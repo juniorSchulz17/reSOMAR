@@ -28,18 +28,19 @@
 					<li class="sidebar-dropdown" ng-init="showCadastro = false"
 						ng-click="showCadastro = !showCadastro"><a href="#"> <i
 							class="fas fa-plus-square"></i> <span>Cadastros</span></a>
+                    </li>
+                    <div class="sidebar-submenu" ng-if="showCadastro">
+                        <ul>
+                            <li><a href="#"><i class="fas fa-hospital"></i><span>Clínicas</span></a></li>
+                            <li><a href="#"><i class="fas fa-donate"></i></i><Span>Doações</Span></a></li>
+                            <li><a href="#"><i class="fas fa-graduation-cap"></i><span>Especialidades</span></a></li>
+                            <li><a href="#"><i class="far fa-building"></i><span>Instituições</span></a></li>
+                            <li><a href="#"><i class="fas fa-user-md"></i><span>Médicos</span></a></li>
+                            <li><a href="#"><i class="fas fa-hands"></i><span>Necessidades</span></a></li>
+                            <li><a href="#"><i class="fas fa-user-injured"></i><span>Pacientes</span></a></li>
+                        </ul>
+                    </div>
 
-						<div class="sidebar-submenu" ng-if="showCadastro">
-							<ul>
-								<li><a href="#">Clínicas</a></li>
-								<li><a href="#">Doações</a></li>
-								<li><a href="#">Especialidades</a></li>
-								<li><a href="#">Instituições</a></li>
-								<li><a href="#">Médicos</a></li>
-								<li><a href="#">Necessidades</a></li>
-								<li><a href="#">Pacientes</a></li>
-							</ul>
-						</div></li>
 					<li class="sidebar-dropdown"><a href="#"> <i
 							class="fas fa-ticket-alt"></i> <span>Vouchers</span>
 					</a></li>

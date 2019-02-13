@@ -377,3 +377,12 @@ html { height: 100%;}
 .fa-plus-circle {
     float: right;
 }
+
+.sidebar-submenu ul li a i {
+    background: #3a3a3a !important;
+    margin-left: 20px;
+}
+
+.sidebar-submenu {
+    background-color: #3a3a3a;
+}
