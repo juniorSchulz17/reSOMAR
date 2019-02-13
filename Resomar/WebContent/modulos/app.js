@@ -23,8 +23,7 @@ angular.module('app').config(
         });
     });
 
-angular.module('app').directive(
-    'head', ['$rootScope', '$location', '$window', function ($rootScope, $location, $window) {
+angular.module('app').directive('head', ['$rootScope', '$location', '$window', function ($rootScope, $location, $window) {
         return {
             restrict: 'E',
             link: function (scope, elem) {
