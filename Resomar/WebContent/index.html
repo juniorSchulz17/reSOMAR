@@ -2,33 +2,26 @@
 <html ng-app="app">
 <head>
     <meta charset="UTF-8">
-
+    <!--Bibliotecas CSS-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css"/>
+    <!--Arquivos CSS-->
     <link rel="stylesheet" href="View/home/home.css"/>
     <link rel="stylesheet" href="View/login/login.css"/>
-
     <link rel="stylesheet" href="templates/menu/menu.css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
-          crossorigin="anonymous">
-
+    <!--//Angular-->
     <script type="text/javascript" src="assets/js/angular.js"></script>
     <script type="text/javascript" src="assets/js/angular-route.js"></script>
     <script type="text/javascript" src="assets/js/angular-animation.js"></script>
-    <script type="text/javascript" src="assets/js/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="assets/js/fontawesome.min.js"></script>
-    <script type="text/javascript" src="assets/js/popper.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-    <script type="text/javascript" src="assets/js/grafic.js"></script>
     <script type="text/javascript" src="modulos/app.js"></script>
     <script type="text/javascript" src="modulos/home/home.controller.js"></script>
-
+    <!--//Bibliotecas JS-->
+    <script type="text/javascript" src="assets/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="assets/js/fontawesome.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 </head>
 <body>
 <ng-include ng-if="activeTab !== '/login'" src="'templates/menu/menu.html'"></ng-include>
-
 <div ng-view></div>
 </body>
 </html>
