@@ -5,9 +5,9 @@ angular.module('app').config(
         $locationProvider.hashPrefix('');
 
         $routeProvider.when('/', {
-            templateUrl: 'View/home/home.html'
-            // controller : 'homeController',
-            // controllerAs : 'homeCtrl'
+            templateUrl: 'View/home/home.html',
+            controller : 'homeController',
+            controllerAs : 'homeCtrl'
         }).when('/login', {
             templateUrl: 'View/login/login.html'
             // controller : 'homeController',
