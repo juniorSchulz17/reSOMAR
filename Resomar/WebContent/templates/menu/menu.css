@@ -484,3 +484,7 @@ ng-include.ng-scope {
 .chiller-theme .mCSB_scrollTools .mCSB_draggerRail {
   background-color: transparent;
 }
+
+.fa-power-off {
+  color: #b30000;
+}
