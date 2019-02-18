@@ -1,109 +1,111 @@
-<div class="page-wrapper chiller-theme">
-    <nav class="sidebar-wrapper" id="sidebar">
-        <div class="sidebar-content">
-            <div class="sidebar-brand">
-                <a href="#">ReSomar</a>
-            </div>
-            <div class="sidebar-header">
-                <div class="user-info">
-                    <span class="user-name">Edison Schulz</span>
-                    <span class="user-role">Administrador
-                    </span>
+<div class="menu-sidebar">
+    <div class="page-wrapper chiller-theme">
+        <nav class="sidebar-wrapper" id="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="#">ReSomar</a>
+                </div>
+                <div class="sidebar-header">
+                    <div class="user-info">
+                        <span class="user-name">Edison Schulz</span>
+                        <span class="user-role">Administrador
+                        </span>
+                    </div>
+                </div>
+                <!-- sidebar-search  -->
+                <div class="sidebar-menu">
+                    <ul>
+                        <li class="header-menu">
+                            <span>Geral</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-home"></i>
+                                <span>Início</span>
+                            </a>
+                        <li class="sidebar-dropdown" ng-init="showCadastro = false"
+                            ng-click="showCadastro = !showCadastro">
+                            <a href="#">
+                                <i class="fas fa-plus-square"></i>
+                                <span>Cadastros</span><i class="fas fa-angle-down"></i>
+                            </a>
+                        </li>
+                        <div class="sidebar-submenu" ng-if="showCadastro">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-hospital"></i>
+                                        <span>Clínicas</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-donate"></i>
+                                        <Span>Doações</Span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <span>Especialidades</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-building"></i>
+                                        <span>Instituições</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-user-md"></i>
+                                        <span>Médicos</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-hands"></i>
+                                        <span>Necessidades</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-user-injured"></i>
+                                        <span>Pacientes</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fas fa-ticket-alt"></i>
+                                <span>Vouchers</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fas fa-paste"></i>
+                                <span>Relatórios</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-cog"></i>
+                                <span>Configurações</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <!-- sidebar-search  -->
-            <div class="sidebar-menu">
-                <ul>
-                    <li class="header-menu">
-                        <span>Geral</span>
-                    </li>
-                    <li class="sidebar-dropdown">
-                        <a href="#">
-                            <i class="fa fa-home"></i>
-                            <span>Início</span>
-                        </a>
-                    <li class="sidebar-dropdown" ng-init="showCadastro = false"
-                        ng-click="showCadastro = !showCadastro">
-                        <a href="#">
-                            <i class="fas fa-plus-square"></i>
-                            <span>Cadastros</span>
-                        </a>
-                    </li>
-                    <div class="sidebar-submenu" ng-if="showCadastro">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-hospital"></i>
-                                    <span>Clínicas</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-donate"></i>
-                                    <Span>Doações</Span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-graduation-cap"></i>
-                                    <span>Especialidades</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-building"></i>
-                                    <span>Instituições</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-user-md"></i>
-                                    <span>Médicos</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-hands"></i>
-                                    <span>Necessidades</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-user-injured"></i>
-                                    <span>Pacientes</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+            <!-- sidebar-content  -->
+            <div class="sidebar-footer">
 
-                    <li class="sidebar-dropdown">
-                        <a href="#">
-                            <i class="fas fa-ticket-alt"></i>
-                            <span>Vouchers</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-dropdown">
-                        <a href="#">
-                            <i class="fas fa-paste"></i>
-                            <span>Relatórios</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-dropdown">
-                        <a href="#">
-                            <i class="fa fa-cog"></i>
-                            <span>Configurações</span>
-                        </a>
-                    </li>
-                </ul>
+                </a>
+                <a href="#">
+                    <i title="Sair" class="fa fa-power-off"></i>
+                </a>
             </div>
-        </div>
-        <!-- sidebar-content  -->
-        <div class="sidebar-footer">
-
-            </a>
-            <a href="#">
-                <i title="Sair" class="fa fa-power-off"></i>
-            </a>
-        </div>
-    </nav>
+        </nav>
+    </div>
 </div>

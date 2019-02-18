@@ -488,3 +488,8 @@ ng-include.ng-scope {
 .fa-power-off {
   color: #b30000;
 }
+
+.fa-angle-down {
+    float: right;
+
+}

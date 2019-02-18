@@ -435,3 +435,8 @@ html { height: 100%;}
     padding: 30px;
     padding-bottom: 15px;
 }
+
+.dashboard {
+    float: right;
+    width: 102%;
+}
