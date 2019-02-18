@@ -388,8 +388,16 @@ html { height: 100%;}
 }
 
 .fast-acess {
-    margin-left: 20%;
+    margin-left: 22%;
     margin-top: 2%;
+    margin-right: 1.5%;
+}
+
+.fast-acess-grafic {
+    margin-left: 22%;
+    margin-top: 2%;
+    margin-right: 1.5%;
+    margin-bottom: 2%;
 }
 
 .card-header {
@@ -397,21 +405,33 @@ html { height: 100%;}
     color: #bdbdbd;
 }
 
-.title-acess {
-    margin-top: 10%;
-}
-
 .fa-plus-circle {
     font-size: 20px;
     color: darkgreen;
+    margin-top: 4%;
 }
 
 .fa-plus-circle:hover {
     font-size: 20px;
     color: #013901;
+    margin-top: 4%;
 }
 
 .icon-dash {
     float: right;
     color: #212529;
+}
+
+.quantity {
+    font: bold;
+    float: left;
+}
+
+.card-deck {
+    padding: 30px;
+}
+
+.card-body {
+    padding: 30px;
+    padding-bottom: 15px;
 }
