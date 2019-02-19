@@ -133,6 +133,7 @@ ng-include.ng-scope {
   height: calc(100% - 30px);
   overflow-y: auto;
   position: relative;
+  background-color: #1E3B2F;
 }
 
 .sidebar-content.desktop {
@@ -485,11 +486,30 @@ ng-include.ng-scope {
   background-color: transparent;
 }
 
-.fa-power-off {
-  color: #b30000;
-}
-
 .fa-angle-down {
     float: right;
+    background: none !important;
+}
 
+.chiller-theme .sidebar-wrapper .sidebar-menu ul li a i {
+  background: none !important;
+  color: #85793C;
+}
+
+.item-menu {
+  color: #bdbdbd !important;
+}
+
+.sidebar-footer {
+  background-color: #162a21 !important;
+}
+
+.sidebar-submenu {
+  background: #162a21 !important;
+}
+
+.user-name {
+  color: #85793C;
+  font-size: 18px;
+  font-weight: bold;
 }

@@ -1,64 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Login</title>
-
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="View/login/login.css"/>
 </head>
 <body>
 <div class="login-block">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 login-sec">
-        <h2 class="text-center">Entrar</h2>
-        <form class="login-form" name="formLogin">
-          <div class="form-group">
-            <label for="userName" class="text-uppercase">Nome de Usuário</label>
-            <input type="text" class="form-control" id="userName" ng-model="fieldUserName" placeholder="" name="userName" required>
-            <span class="help-block" ng-show="formLogin.userName.$error.required">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 login-sec">
+                <h2 class="text-center">Entrar</h2>
+                <form class="login-form" name="formLogin">
+                    <div class="form-group">
+                        <label for="userName" class="text-uppercase">Nome de Usuário</label>
+                        <input type="text" class="form-control" id="userName" ng-model="fieldUserName" placeholder=""
+                               name="userName" required>
+                        <span class="help-block" ng-show="formLogin.userName.$error.required">
               <ul>
                 <li>
                   Campo obrigatório
                 </li>
               </ul>
             </span>
-          </div>
+                    </div>
 
-          <div class="form-group">
-            <label for="exampleInputPassword1" class="text-uppercase">Sen
-              ha</label>
-            <input type="password" class="form-control" ng-model="fieldPassword" placeholder="" name="password" required>
-             <span class="help-block" ng-show="formLogin.password.$error.required">
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="text-uppercase">Senha</label>
+                        <input type="password" class="form-control" ng-model="fieldPassword" placeholder=""
+                               name="password" required>
+                        <span class="help-block" ng-show="formLogin.password.$error.required">
                <ul>
                  <li>
                    Campo obrigatório
                  </li>
                </ul>
              </span>
-          </div>
-          <div class="form-check">
-            <button type="submit" class="btn btn-login float-right" >Entrar</button>
+                    </div>
+                    <div class="form-check">
+                        <button type="submit" class="btn btn-login float-right">Entrar</button>
 
-            <button type="button" class="btn btn-login float-right btnParticipation">Quero Participar</button>
-          </div>
-        </form>
-      </div>
-      <div class="col-md-8 banner-sec">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="d-block img-fluid" src="assets/images/background-login.jpg" alt="First slide">
-              <div class="banner-text">
-                <h2>Projeto ReSOMAR</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-              </div>
+                        <button type="button" class="btn btn-login float-right btnParticipation">Quero Participar
+                        </button>
+                    </div>
+                </form>
             </div>
-          </div>
+            <div class="col-md-8 banner-sec">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" src="assets/images/background-login.jpg" alt="First slide">
+                            <div class="banner-text">
+                                <h2>Projeto ReSOMAR</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 </body>
 </html>
