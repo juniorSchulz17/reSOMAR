@@ -486,7 +486,7 @@ ng-include.ng-scope {
   background-color: transparent;
 }
 
-.fa-angle-down {
+.fa-angle-down, .fa-angle-up {
     float: right;
     background: none !important;
 }

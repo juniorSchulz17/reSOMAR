@@ -28,7 +28,7 @@
                             <a href="#">
                                 <i class="fas fa-plus-square"></i>
                                 <span class="item-menu">Cadastros</span>
-                                <i class="fas fa-angle-down"></i>
+                                <i ng-class="{'fas fa-angle-down':!showCadastro, 'fas fa-angle-up':showCadastro}"></i>
                             </a>
                     </li>
                         <div class="sidebar-submenu" ng-if="showCadastro">
