@@ -9,9 +9,9 @@ angular.module('app').config(
             controller : 'homeController',
             controllerAs : 'homeCtrl'
         }).when('/login', {
-            templateUrl: 'View/login/login.html'
-            // controller : 'homeController',
-            // controllerAs : 'homeCtrl'
+            templateUrl: 'View/login/login.html',
+            controller : 'loginController',
+            controllerAs : 'loginCtrl'
 
         }).when('/index	', {
             templateUrl: 'View/home/home.html'
