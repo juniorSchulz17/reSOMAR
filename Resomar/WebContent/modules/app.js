@@ -18,6 +18,11 @@ angular.module('app').config(
             // controller : 'homeController',
             // controllerAs : 'homeCtrl'
 
+        }).when('/clinic	', {
+            templateUrl: 'View/clinic/clinic.html'
+            // controller : 'homeController',
+            // controllerAs : 'homeCtrl'
+
         }).otherwise({
             redirectTo: '/'
         });
