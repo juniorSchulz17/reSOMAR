@@ -1,4 +1,4 @@
-.specialty-register {
+.patient-register {
     float: right;
     width: 102%;
 }
@@ -9,7 +9,7 @@
     margin-right: 1.5%;
 }
 
-.specialty-form {
+.patient-form {
     padding: 30px !important;
 }
 

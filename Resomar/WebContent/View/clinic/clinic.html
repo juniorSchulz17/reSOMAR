@@ -1,47 +1,52 @@
-<div class="container col-sm-8 col-lg-8 col-xl-8 col-md-8">
-    <form>
-        <legend style="text-align: center">Cadastro de Clínicas</legend>
-        <div class="row">
-            <label class="col-md-6">
-                <input class="form-control input nomeClinica" type="text"
-                       placeholder="Nome da Clínica" name="nomeClinica">
-            </label>
-            <label class="col-md-4">
-                <input class="form-control input" type="text" placeholder="CNPJ"
-                       id="CNPJ" name="CNPJ">
-            </label>
-            <label class="col-md-2">
-                <input class="form-control input" type="text" placeholder="CEP"
-                       id="CEP" name="CEP">
-            </label>
-            <label class="col-md-6">
-                <input class="form-control input" type="text" placeholder="Endereco"
-                       id="Endereco" name="Endereco">
-            </label>
-            <label class="col-md-6" >
-                <input class="form-control input" type="text" placeholder="Bairro"
-                       id="Bairro" name="Bairro">
-            </label>
-            <label class="col-md-6">
-                <input class="form-control input" type="text" placeholder="Cidade"
-                       id="Cidade" name="Cidade  ">
-            </label>
-            <label class="col-md-2">
-                <input class="form-control input" type="text" placeholder="Número"
-                       id="numero" name="Numero">
-            </label>
-            <label class="col-md-1">
-                <input class="form-control input" type="text" placeholder="UF"
-                       id="Estado" name="Estado">
-            </label>
-            <label class="col-md-3">
-                <input class="form-control input" type="text" placeholder="Complemento"
-                       id="Complemento" name="Complemento">
-            </label>
-            <div class="buttons col-md-12" style="text-align:right;">
-                <input type="button" class="btn btn-danger" value="Cancelar">
-                <input type="button" class="btn btn-primary" value="Cadastrar">
+<link rel="stylesheet" href="View/clinic/clinic.css"/>
+<div class="clinic-register">
+    <div class="card fast-acess bg-light" style="max-width: 73rem;">
+        <h4 class="card-header">Cadastro de Clínica
+        <a href="#" title="Minimizar"><i class="fas fa-window-minimize"></i></a>
+        </h4>
+        <form class="clinic-form">
+            <div class="row">
+                <label class="col-md-6">
+                    <input class="form-control input nomeClinica" type="text"
+                           placeholder="Nome da Clínica" name="nomeClinica">
+                </label>
+                <label class="col-md-3">
+                    <input class="form-control input" type="text" placeholder="CNPJ"
+                           id="CNPJ" name="CNPJ">
+                </label>
+                <label class="col-md-3">
+                    <input class="form-control input" type="text" placeholder="CEP"
+                           id="CEP" name="CEP">
+                </label>
+                <label class="col-md-5">
+                    <input class="form-control input" type="text" placeholder="Endereco"
+                           id="Endereco" name="Endereco">
+                </label>
+                <label class="col-md-1">
+                    <input class="form-control input" type="text" placeholder="Nº"
+                           id="numero" name="Numero">
+                </label>
+                <label class="col-md-3">
+                    <input class="form-control input" type="text" placeholder="Bairro"
+                           id="Bairro" name="Bairro">
+                </label>
+                <label class="col-md-3">
+                    <input class="form-control input" type="text" placeholder="Cidade"
+                           id="Cidade" name="Cidade  ">
+                </label>
+                <label class="col-md-1">
+                    <input class="form-control input" type="text" placeholder="UF"
+                           id="Estado" name="Estado">
+                </label>
+                <label class="col-md-4">
+                    <input class="form-control input" type="text" placeholder="Complemento"
+                           id="Complemento" name="Complemento">
+                </label>
+                <div class="buttons col-md-12" style="text-align:right;">
+                    <input type="button" class="btn btn-cancel" value="Cancelar">
+                    <input type="button" class="btn btn-save" value="Cadastrar">
+                </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
