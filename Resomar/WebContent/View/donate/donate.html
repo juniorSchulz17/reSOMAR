@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="View/donate/donate.css"/>
+<div class="donate-register">
+    <div class="card fast-acess bg-light" style="max-width: 73rem;">
+        <h4 class="card-header">Cadastro de Doações
+            <a href="#" title="Minimizar"><i class="fas fa-window-minimize"></i></a>
+        </h4>
+        <form class="donate-form">
+            <div class="row">
+                <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                    <select type="text" id="tipoDoacao" name="tipoDoacao" class="form-control">
+                        <option value="Selecione">Selecione o tipo de doação</option>
+                        <option value="Consultas">Consultas</option>
+                        <option value="Exames">Exames</option>
+                        <option value="Doacoes">Doações</option>
+                    </select>
+                </label>
+
+                <label id="quantidadeConsultas" class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                    <input id="quantidadeConsultas" name="quantidadeConsultas" class="form-control"
+                           placeholder="Qtd. Consultas">
+                </label>
+                <label id="clinicaConsultas" class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                    <select type="hidden" id="clinicaConsultas" name="clinicaConsultas" class="form-control">
+                        <option>Selecione a clínica responsável</option>
+                        <option value="Clínica">Clínica Fantasia</option>
+                    </select>
+                </label>
+
+                <label id="quantidadeExames" class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                    <input id="quantidadeExames" name="quantidadeExames" class="form-control" placeholder="Qtd. Exames">
+                </label>
+                <label id="complexidadeExame" class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                    <select id="complexidadeExame" name="complexidadeExame" class="form-control">
+                        <option>Informe a complexidade</option>
+                        <option>Baixa</option>
+                        <option>Média</option>
+                        <option>Alta</option>
+                    </select>
+                </label>
+                <label id="clinicaExames" class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                    <select id="clinicaExames" name="clinicaExames" class="form-control">
+                        <option>Selecione a clínica responsável</option>
+                        <option>Clínica Fantasia</option>
+                    </select>
+                </label>
+
+                <label id="quantidadeAdocoes" class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                    <input id="quantidadeAdocoes" name="quantidadeAdocoes" class="form-control"
+                           placeholder="Qtd. Adoções">
+                </label>
+                <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                    <select id="clinicaAdocao" name="clinicaAdocao" class="form-control">
+                        <option>Selecione a clínica responsável</option>
+                        <option>Clínica Fantasia</option>
+                    </select>
+                </label>
+                <div class="buttons col-md-12" style="text-align: right">
+                    <button type="button" class="btn btn-cancel">Cancelar</button>
+                    <button type="button" class="btn btn-save">Cadastrar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

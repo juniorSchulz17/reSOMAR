@@ -23,6 +23,36 @@ angular.module('app').config(
             // controller : 'homeController',
             // controllerAs : 'homeCtrl'
 
+        }).when('/donate', {
+            templateUrl: 'View/donate/donate.html'
+            // controller : 'homeController',
+            // controllerAs : 'homeCtrl'
+
+        }).when('/specialty', {
+            templateUrl: 'View/specialty/specialty.html'
+            // controller : 'homeController',
+            // controllerAs : 'homeCtrl'
+
+        }).when('/institution', {
+            templateUrl: 'View/institution/institution.html'
+            // controller : 'homeController',
+            // controllerAs : 'homeCtrl'
+
+        }).when('/medic', {
+            templateUrl: 'View/medic/medic.html'
+            // controller : 'homeController',
+            // controllerAs : 'homeCtrl'
+
+        }).when('/needs', {
+            templateUrl: 'View/needs/needs.html'
+            // controller : 'homeController',
+            // controllerAs : 'homeCtrl'
+
+        }).when('/patient', {
+            templateUrl: 'View/patient/patient.html'
+            // controller : 'homeController',
+            // controllerAs : 'homeCtrl'
+
         }).otherwise({
             redirectTo: '/'
         });
