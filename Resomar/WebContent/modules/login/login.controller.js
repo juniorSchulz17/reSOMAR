@@ -15,6 +15,7 @@ function loginController() {
             return false;
         }
 
-
+        alert("Parabéns");
+        return false;
     }
 }

@@ -13,32 +13,23 @@
                 <h2 class="text-center">Entrar</h2>
                 <form class="login-form" name="formLogin">
                     <div class="form-group">
-                        <label for="userName" class="text-uppercase">Nome de Usuário</label>
-                        <input type="text" class="form-control" id="userName" ng-model="loginCtrl.userName" placeholder=""
+                        <label class="text-uppercase">Nome de Usuário</label>
+                        <input type="text" class="form-control" ng-model="loginCtrl.userName"
+                               ng-class="{'invalid': formLogin.userName.$invalid && formLogin.userName.$touched}"
+                               placeholder=""
                                name="userName" required>
-                        <span class="help-block" ng-show="formLogin.userName.$error.required">
-              <ul>
-                <li>
-                  Campo obrigatório
-                </li>
-              </ul>
-            </span>
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputPassword1" class="text-uppercase">Senha</label>
+                        <label class="text-uppercase">Senha</label>
                         <input type="password" class="form-control" ng-model="loginCtrl.password" placeholder=""
+                               ng-class="{'invalid': formLogin.password.$invalid && formLogin.password.$touched}"
                                name="password" required>
-                        <span class="help-block" ng-show="formLogin.password.$error.required">
-               <ul>
-                 <li>
-                   Campo obrigatório
-                 </li>
-               </ul>
-             </span>
                     </div>
                     <div class="form-check">
-                        <button type="submit" class="btn btn-login float-right" ng-click="loginCtrl.validateLogin();">Entrar</button>
+                        <button type="submit" class="btn btn-login float-right" ng-click="loginCtrl.validateLogin();">
+                            Entrar
+                        </button>
 
                         <button type="button" class="btn btn-login float-right btnParticipation">Quero Participar
                         </button>

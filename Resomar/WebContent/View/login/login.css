@@ -117,3 +117,7 @@ body {
 .d-block {
 	width: 110% !important;
 }
+
+.invalid {
+	border-color: red;
+}
