@@ -4,8 +4,8 @@
         <h4 class="card-header" >Acesso Rápido
         <a title="Minimizar"><i ng-class="{'fas fa-plus':!showAccess, 'fas fa-window-minimize':showAccess}"  ng-init="showAccess = true" ng-click="showAccess = !showAccess"></i></a>
         </h4>
-        <div ng-show="showAccess" class="card-body row">
-            <div class="col-md-4">
+        <div ng-show="showAccess" ng-class="{'animated zoomOut': !showAccess, 'animated zoomIn':showAccess}" class="card-body row">
+                <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
                         <span>Clínicas</span><i class="fas fa-hospital icon-dash"></i>
@@ -14,7 +14,7 @@
                         <a style="text-decoration:none;" href="#/clinic" title="Cadastrar Clínicas" class="fa fa-plus-circle"></a>
                     </div>
                 </div>
-            </div>
+        </div>
             <div class="col-md-4 form-group">
                 <div class="card">
                     <div class="card-body">
@@ -72,7 +72,7 @@
         <h4 class="card-header ">Informações
         <a title="Minimizar"><i ng-class="{'fas fa-plus':!showInf, 'fas fa-window-minimize':showInf}"  ng-init="showInf = true" ng-click="showInf = !showInf"></i></a>
         </h4>
-        <div ng-show="showInf" class="card-deck">
+        <div ng-class="{'animated zoomOut': !showInf, 'animated zoomIn':showInf}" ng-show="showInf" class="card-deck">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Gráfico 1</h5>
