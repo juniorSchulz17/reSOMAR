@@ -6,12 +6,17 @@ angular.module('app').config(
 
         $routeProvider.when('/', {
             templateUrl: 'View/home/home.html',
-            controller : 'homeController',
-            controllerAs : 'homeCtrl'
+            controller: 'homeController',
+            controllerAs: 'homeCtrl'
         }).when('/login', {
             templateUrl: 'View/login/login.html',
-            controller : 'loginController',
-            controllerAs : 'loginCtrl'
+            controller: 'loginController',
+            controllerAs: 'loginCtrl'
+
+        }).when('/user', {
+            templateUrl: 'View/user/user.html'
+            // controller: 'loginController',
+            // controllerAs: 'login'
 
         }).when('/index	', {
             templateUrl: 'View/home/home.html'
@@ -59,12 +64,12 @@ angular.module('app').config(
     });
 
 angular.module('app').directive('head', ['$rootScope', '$location', '$window', function ($rootScope, $location, $window) {
-        return {
-            restrict: 'E',
-            link: function (scope, elem) {
-                $rootScope.$on('$routeChangeStart', function (e, next, current) {
-                    $rootScope.activeTab = $location.path();
-                });
-            }
-        };
-    }]);
+    return {
+        restrict: 'E',
+        link: function (scope, elem) {
+            $rootScope.$on('$routeChangeStart', function (e, next, current) {
+                $rootScope.activeTab = $location.path();
+            });
+        }
+    };
+}]);
