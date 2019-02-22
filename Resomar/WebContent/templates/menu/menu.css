@@ -513,3 +513,7 @@ ng-include.ng-scope {
   font-size: 18px;
   font-weight: bold;
 }
+
+.register {
+  cursor: pointer;
+}
