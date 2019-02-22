@@ -16,13 +16,14 @@
                         <label class="text-uppercase">Nome de Usuário</label>
                         <input type="text" class="form-control" ng-model="loginCtrl.userName"
                                ng-class="{'invalid': formLogin.userName.$invalid && formLogin.userName.$touched}"
-                               placeholder=""
+                               focus="true"
+                               placeholder="Nome de Usuário"
                                name="userName" required>
                     </div>
 
                     <div class="fo  rm-group">
                         <label class="text-uppercase">Senha</label>
-                        <input type="password" class="form-control" ng-model="loginCtrl.password" placeholder=""
+                        <input type="password" class="form-control" ng-model="loginCtrl.password" placeholder="Senha"
                                ng-class="{'invalid': formLogin.password.$invalid && formLogin.password.$touched}"
                                name="password" required>
                     </div>

@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/css/fontawesome/fontawesome.min.css"/>
 
+    <!--Arquivos CSS-->
+    <link rel="stylesheet" href="templates/menu/menu.css"/>
+
     <!--//Angular-->
     <script type="text/javascript" src="assets/js/angular/angular.js"></script>
     <script type="text/javascript" src="assets/js/angular/angular-route.js"></script>
@@ -23,7 +26,7 @@
     <script type="text/javascript" src="assets/js/bootstrap/bootstrap.min.js"></script>
 </head>
 <body>
-<ng-include ng-if="activeTab !== '/login'" src="'templates/menu/menu.html'"></ng-include>
+<ng-include ng-if="activeTab !== '/login'; activeTab !== '/user'" src="'templates/menu/menu.html'"></ng-include>
 <div ng-view></div>
 </body>
 </html>

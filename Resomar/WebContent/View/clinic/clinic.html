@@ -3,9 +3,9 @@
 <div class="clinic-register">
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de Clínica
-        <a href="#" title="Minimizar"><i class="fas fa-window-minimize"></i></a>
+        <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}" ng-init="showForm = true" ng-click="showForm = !showForm"></i></a>
         </h4>
-        <form class="clinic-form">
+        <form class="clinic-form" ng-show="showForm">
             <div class="row">
                 <label class="col-md-6">
                     <input class="form-control input nomeClinica" type="text"

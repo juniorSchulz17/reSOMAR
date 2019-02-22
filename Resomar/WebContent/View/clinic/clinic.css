@@ -5,6 +5,10 @@
     margin-right: 3.5%;
 }
 
+.fa-window-minimize, .fa-plus {
+    cursor: pointer;
+}
+
 .clinic-form {
     padding: 30px !important;
 }
@@ -43,6 +47,13 @@
     font-size: 16px;
     margin-top: 2px;
 }
+.fa-plus {
+    float: right;
+    color: #bdbdbd;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 7px;
+}
 
 .fa-window-minimize:hover {
     float: right;
@@ -51,6 +62,15 @@
     font-size: 16px;
     margin: 0 auto;
     margin-top: 2px;
+}
+
+.fa-plus:hover {
+    float: right;
+    color: #a1a1a1;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 auto;
+    margin-top: 7px;
 }
 
 a {
