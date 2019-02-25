@@ -61,3 +61,66 @@
 a {
     color: inherit;
 }
+
+.fa-window-minimize {
+    float: right;
+    color: #bdbdbd;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+
+.fa-window-minimize:hover {
+    float: right;
+    color: #a1a1a1;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.fa-plus {
+    float: right;
+    color: #bdbdbd;
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+.fa-plus:hover {
+    float: right;
+    color: #a1a1a1;
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+.table-striped {
+    width: 76%;
+    margin-right: 55px;
+    float: right;
+    margin-top: 20px;
+}
+
+.fa-edit {
+    font-size: 18px;
+    color: white;
+}
+
+.fa-trash-alt {
+    font-size: 18px;
+    color: white;
+}
+
+
+.icons {
+    float: right;
+}
+
+.button-edit {
+    background: #85793c;
+}
+
+.button-trash {
+    background: #1E3B2F;
+}

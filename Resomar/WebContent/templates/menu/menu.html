@@ -31,7 +31,7 @@
                                 <i ng-class="{'fas fa-angle-down':!showCadastro, 'fas fa-angle-up':showCadastro}"></i>
                             </a>
                     </li>
-                        <div class="sidebar-submenu" ng-if="showCadastro">
+                        <div class="sidebar-submenu" ng-class="{'animated slideInUp showCadastro': !showCadastro, 'animated slideInDown':showCadastro}" ng-if="showCadastro">
                             <ul>
                                 <li>
                                     <a href="#/clinic">

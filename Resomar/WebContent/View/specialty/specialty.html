@@ -1,10 +1,14 @@
 <link rel="stylesheet" href="View/specialty/specialty.css"/>
+
 <div class="specialty-register">
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de Especialidade
-            <a href="#" title="Minimizar"><i class="fas fa-window-minimize"></i></a>
+            <a title="Minimizar"><i ng-class="{'fas fa-plus':!showAccess, 'fas fa-window-minimize':showAccess}"
+                                    ng-init="showAccess = true" ng-click="showAccess = !showAccess"
+                                    class="fas fa-window-minimize"></i></a>
         </h4>
-        <form class="specialty-form">
+        <form ng-show="showAccess" ng-class="{'animated zoomOut': !showAccess, 'animated zoomIn':showAccess}"
+              class="specialty-form">
             <div class="row">
                 <div class="col-md-4">
                     <input class="form-control input Especialidade" type="text"
@@ -18,3 +22,38 @@
         </form>
     </div>
 </div>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Especialidade</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td>Dentista</td>
+        <td class="icons">
+            <a class="btn btn-sm button-edit "><i class="fas fa-edit"></i></a>
+            <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">2</th>
+        <td>Cirurgião</td>
+        <td class="icons">
+            <a class="btn btn-sm button-edit"><i class="fas fa-edit"></i></a>
+                <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">3</th>
+        <td>Pediatra</td>
+        <td class="icons">
+            <a class="btn btn-sm button-edit"><i class="fas fa-edit"></i></a>
+                <a class="btn btn-sm button-trash"> <i class="fas fa-trash-alt"></i></a>
+        </td>
+    </tr>
+    </tbody>
+</table>
