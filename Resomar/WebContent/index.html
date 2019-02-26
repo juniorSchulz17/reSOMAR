@@ -27,7 +27,7 @@
     <script type="text/javascript" src="assets/js/bootstrap/bootstrap.min.js"></script>
 </head>
 <body>
-<ng-include ng-if="activeTab !== '/login'; activeTab !== '/user'" src="'templates/menu/menu.html'"></ng-include>
+<ng-include ng-if="activeTab !== '/login' && activeTab !== '/user'" src="'templates/menu/menu.html'"></ng-include>
 <div ng-view></div>
 </body>
 </html>

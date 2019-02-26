@@ -7,14 +7,15 @@
                                     ng-init="showAccess = true" ng-click="showAccess = !showAccess"
                                     class="fas fa-window-minimize"></i></a>
         </h4>
-        <form ng-show="showAccess" ng-class="{'animated zoomOut': !showAccess, 'animated zoomIn':showAccess}"
+        <form ng-show="showAccess" name="formSpeciality" ng-class="{'animated zoomOut': !showAccess, 'animated zoomIn':showAccess}"
               class="specialty-form">
             <div class="row">
+
                 <div class="col-md-4">
-                    <input class="form-control input Especialidade" type="text"
-                           placeholder="Especialidade" name="Especialidade">
+                    <label ng-if="formSpeciality.speciality.$valid">Especialidade</label>
+                    <input class="form-control input"  name="speciality" placeholder="Especialidade" ng-model="specialityCtrl.speciality">
                 </div>
-                <div class="buttons col-md-12" style="text-align:right;">
+                <div class="buttons col-md-12">
                     <input type="button" class="btn btn-cancel" value="Cancelar">
                     <input type="button" class="btn btn-save" value="Cadastrar">
                 </div>
@@ -35,7 +36,7 @@
         <th scope="row">1</th>
         <td>Dentista</td>
         <td class="icons">
-            <a class="btn btn-sm button-edit "><i class="fas fa-edit"></i></a>
+            <a class="btn btn-sm button-edit "><i class="fas fa-pencil-alt"></i></a>
             <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
         </td>
     </tr>
@@ -43,7 +44,7 @@
         <th scope="row">2</th>
         <td>Cirurgião</td>
         <td class="icons">
-            <a class="btn btn-sm button-edit"><i class="fas fa-edit"></i></a>
+            <a class="btn btn-sm button-edit"><i class="fas fa-pencil-alt"></i></a>
                 <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
         </td>
     </tr>
@@ -51,7 +52,7 @@
         <th scope="row">3</th>
         <td>Pediatra</td>
         <td class="icons">
-            <a class="btn btn-sm button-edit"><i class="fas fa-edit"></i></a>
+            <a class="btn btn-sm button-edit"><i class="fas fa-pencil-alt"></i></a>
                 <a class="btn btn-sm button-trash"> <i class="fas fa-trash-alt"></i></a>
         </td>
     </tr>
