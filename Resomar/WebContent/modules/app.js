@@ -1,4 +1,4 @@
-angular.module('app', ['ngRoute']);
+angular.module('app', ['ngRoute','ui.bootstrap']);
 
 angular.module('app').config(
     function ($httpProvider, $routeProvider, $locationProvider) {
@@ -34,17 +34,17 @@ angular.module('app').config(
             // controllerAs : 'homeCtrl'
 
         }).when('/specialty', {
-            templateUrl: 'View/specialty/specialty.html'
-            // controller : 'homeController',
-            // controllerAs : 'homeCtrl'
+            templateUrl: 'View/specialty/specialty.html',
+            controller : 'specialityController',
+            controllerAs : 'specialityCtrl'
 
         }).when('/institution', {
             templateUrl: 'View/institution/institution.html'
             // controller : 'homeController',
             // controllerAs : 'homeCtrl'
 
-        }).when('/medic', {
-            templateUrl: 'View/medic/medic.html'
+        }).when('/specialist', {
+            templateUrl: 'View/specialist/specialist.html'
             // controller : 'homeController',
             // controllerAs : 'homeCtrl'
 
@@ -73,3 +73,18 @@ angular.module('app').directive('head', ['$rootScope', '$location', '$window', f
         }
     };
 }]);
+
+angular.module('app').directive('focus', function($timeout, $parse) {
+    return {
+        link: function(scope, element, attrs) {
+            var model = $parse(attrs.focus);
+            scope.$watch(model, function(value) {
+                if(value === true) {
+                    $timeout(function() {
+                        element[0].focus();
+                    });
+                }
+            });
+        }
+    };
+});
