@@ -1,4 +1,4 @@
-angular.module('app', ['ngRoute','ui.bootstrap']);
+angular.module('app', ['ngAnimate', 'ngRoute','ui.bootstrap']);
 
 angular.module('app').config(
     function ($httpProvider, $routeProvider, $locationProvider) {
@@ -8,52 +8,52 @@ angular.module('app').config(
             templateUrl: 'View/home/home.html',
             controller: 'homeController',
             controllerAs: 'homeCtrl'
-        }).when('/login', {
+        }).when('/entrar', {
             templateUrl: 'View/login/login.html',
             controller: 'loginController',
             controllerAs: 'loginCtrl'
 
-        }).when('/user', {
+        }).when('/usuario', {
             templateUrl: 'View/user/user.html'
             // controller: 'loginController',
             // controllerAs: 'login'
 
-        }).when('/index	', {
+        }).when('/principal	', {
             templateUrl: 'View/home/home.html'
             // controller : 'homeController',
             // controllerAs : 'homeCtrl'
 
-        }).when('/clinic', {
+        }).when('/clinica', {
             templateUrl: 'View/clinic/clinic.html'
             // controller : 'homeController',
             // controllerAs : 'homeCtrl'
 
-        }).when('/donate', {
+        }).when('/doacao', {
             templateUrl: 'View/donate/donate.html'
             // controller : 'homeController',
             // controllerAs : 'homeCtrl'
 
-        }).when('/specialty', {
+        }).when('/especialidade', {
             templateUrl: 'View/specialty/specialty.html',
             controller : 'specialityController',
             controllerAs : 'specialityCtrl'
 
-        }).when('/institution', {
+        }).when('/instituicao', {
             templateUrl: 'View/institution/institution.html'
             // controller : 'homeController',
             // controllerAs : 'homeCtrl'
 
-        }).when('/specialist', {
+        }).when('/especialista', {
             templateUrl: 'View/specialist/specialist.html'
             // controller : 'homeController',
             // controllerAs : 'homeCtrl'
 
-        }).when('/needs', {
+        }).when('/necessidade', {
             templateUrl: 'View/needs/needs.html'
             // controller : 'homeController',
             // controllerAs : 'homeCtrl'
 
-        }).when('/patient', {
+        }).when('/paciente', {
             templateUrl: 'View/patient/patient.html'
             // controller : 'homeController',
             // controllerAs : 'homeCtrl'

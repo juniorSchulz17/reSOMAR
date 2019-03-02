@@ -1,11 +1,21 @@
+<link rel="stylesheet" href="View/specialty/editModal.css">
 <div class="modal-header">
-    <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+    <h4 class="title-header">Editar Especialidade</h4>
 </div>
 <div class="modal-body" id="modal-body">
-    <ul>
-    </ul>
+    <form name="formSpecialityEdit"
+          class="specialty-form-modal">
+        <div class="row">
+
+            <div class="col-md-4">
+                <label ng-if="formSpecialityEdit.specialityEdit.$valid">Especialidade</label>
+                <input class="form-control input"  name="specialityEdit" placeholder="Especialidade" focus="true"
+                       ng-class="{'invalid':formSpecialityEdit.specialityEdit.$invalid && formSpecialityEdit.specialityEdit.$touched}" ng-model="specialityCtrl.specialityEdit" required>
+            </div>
+        </div>
+    </form>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" type="button" >OK</button>
-    <button class="btn btn-warning" type="button" >Cancel</button>
+    <button class="btn button-cancel" ng-click="specialityCtrl.closeModal();" type="button">Cancelar</button>
+    <button class="btn button-save" ng-click="specialityCtrl.validateSpecialityEdit();" type="button">Salvar</button>
 </div>
