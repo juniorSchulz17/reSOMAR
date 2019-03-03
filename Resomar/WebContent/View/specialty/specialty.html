@@ -13,11 +13,11 @@
 
                 <div class="col-md-4">
                     <label ng-if="formSpeciality.speciality.$valid">Especialidade</label>
-                    <input class="form-control input"  name="speciality" placeholder="Especialidade" focus="true"
+                    <input class="form-control input"  name="speciality" placeholder="Especialidade"
                            ng-class="{'invalid':formSpeciality.speciality.$invalid && formSpeciality.speciality.$touched}" ng-model="specialityCtrl.speciality" required>
                 </div>
                 <div class="buttons col-md-12">
-                    <input type="button" class="btn btn-cancel" value="Cancelar">
+                    <input type="button" class="btn btn-cancel" ng-click="specialityCtrl.closeModal();" value="Cancelar">
                     <input type="button" class="btn btn-save" ng-click="specialityCtrl.validateSpeciality();" value="Cadastrar">
                 </div>
             </div>
