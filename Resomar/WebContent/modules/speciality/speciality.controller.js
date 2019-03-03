@@ -21,7 +21,7 @@ angular.module("app").controller("specialityController", function ($uibModal, $l
     }
 
     //open modal function
-    _self.openModal = function (size) {
+    _self.openModal = (size) => {
         var modalInstance = $uibModal.open({
             animation: true,
             templateUrl: 'View/specialty/editModal.html',
@@ -31,18 +31,11 @@ angular.module("app").controller("specialityController", function ($uibModal, $l
             windowClass: 'show',
             backdropClass: 'show'
         });
+        $uibModal.modal = modalInstance;
     }
 
-    //open modal function
-    _self.openModal = function (size) {
-        var modalInstance = $uibModal.open({
-            animation: true,
-            templateUrl: 'View/specialty/editModal.html',
-            controller: 'specialityController',
-            controllerAs: 'specialityCtrl',
-            size: size,
-            windowClass: 'show',
-            backdropClass: 'show'
-        });
+    //close modal function
+    _self.closeModal = () => {
+       $uibModal.modal.close();
     }
 });
