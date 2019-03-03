@@ -34,8 +34,8 @@ angular.module("app").controller("specialityController", function ($uibModal, $l
         $uibModal.modal = modalInstance;
     }
 
+    //close modal function
     _self.closeModal = () => {
        $uibModal.modal.close();
-
     }
 });
