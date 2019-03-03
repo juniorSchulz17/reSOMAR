@@ -25,12 +25,12 @@
 }
 
 .btn-cancel {
-    background: #85793C;
+    background: #1E3B2F;
     color: white;
 }
 
 .btn-save {
-    background: #1E3B2F;
+    background: #85793C;
     color: white;
 }
 
@@ -123,4 +123,7 @@ a {
 
 .button-trash {
     background: #1E3B2F;
+}
+.invalid {
+    border-color: red;
 }

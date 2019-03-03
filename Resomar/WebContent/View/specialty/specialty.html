@@ -7,17 +7,18 @@
                                     ng-init="showAccess = true" ng-click="showAccess = !showAccess"
                                     class="fas fa-window-minimize"></i></a>
         </h4>
-        <form ng-show="showAccess" name="formSpeciality" ng-class="{'animated zoomOut': !showAccess, 'animated zoomIn':showAccess}"
+        <form ng-show="showAccess" name="formSpeciality"
               class="specialty-form">
             <div class="row">
 
                 <div class="col-md-4">
                     <label ng-if="formSpeciality.speciality.$valid">Especialidade</label>
-                    <input class="form-control input"  name="speciality" placeholder="Especialidade" ng-model="specialityCtrl.speciality">
+                    <input class="form-control input"  name="speciality" placeholder="Especialidade" focus="true"
+                           ng-class="{'invalid':formSpeciality.speciality.$invalid && formSpeciality.speciality.$touched}" ng-model="specialityCtrl.speciality" required>
                 </div>
                 <div class="buttons col-md-12">
                     <input type="button" class="btn btn-cancel" value="Cancelar">
-                    <input type="button" class="btn btn-save" value="Cadastrar">
+                    <input type="button" class="btn btn-save" ng-click="specialityCtrl.validateSpeciality();" value="Cadastrar">
                 </div>
             </div>
         </form>
@@ -36,7 +37,7 @@
         <th scope="row">1</th>
         <td>Dentista</td>
         <td class="icons">
-            <a class="btn btn-sm button-edit "><i class="fas fa-pencil-alt"></i></a>
+            <a class="btn btn-sm button-edit " ng-click="specialityCtrl.openModal('lg');" ><i class="fas fa-pencil-alt"></i></a>
             <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
         </td>
     </tr>

@@ -9,25 +9,29 @@
 
     <!--Arquivos CSS-->
     <link rel="stylesheet" href="templates/menu/menu.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-    <!--//Angular-->
-    <script type="text/javascript" src="assets/js/angular/angular.js"></script>
-    <script type="text/javascript" src="assets/js/angular/angular-route.js"></script>
-    <script type="text/javascript" src="assets/js/angular/angular-animation.js"></script>
-    <script type="text/javascript" src="modules/app.js"></script>
-    <script type="text/javascript" src="modules/home/home.controller.js"></script>
-    <script type="text/javascript" src="modules/login/login.controller.js"></script>
 
     <!--//Bibliotecas JS-->
     <script type="text/javascript" src="assets/js/jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="assets/js/angular/angular.js"></script>
+    <script type="text/javascript" src="assets/js/angular/angular-route.js"></script>
+    <script type="text/javascript" src="assets/js/angular/angular-animation.js"></script>
     <script type="text/javascript" src="assets/js/fontawesome/fontawesome.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap/ui-bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/grafic/chart.js"></script>
     <script type="text/javascript" src="assets/js/grafic/grafic.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script type="text/javascript" src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <!--//Angular-->
+    <script type="text/javascript" src="modules/app.js"></script>
+    <script type="text/javascript" src="modules/home/home.controller.js"></script>
+    <script type="text/javascript" src="modules/login/login.controller.js"></script>
+    <script type="text/javascript" src="modules/speciality/speciality.controller.js"></script>
+
 </head>
 <body>
-<ng-include ng-if="activeTab !== '/login' && activeTab !== '/user'" src="'templates/menu/menu.html'"></ng-include>
+<ng-include ng-if="activeTab !== '/entrar' && activeTab !== '/usuario'" src="'templates/menu/menu.html'"></ng-include>
 <div ng-view></div>
 </body>
 </html>
