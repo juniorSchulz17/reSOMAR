@@ -2,9 +2,9 @@
 <div class="institution-register">
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de ONG
-            <a href="#" title="Minimizar"><i class="fas fa-window-minimize"></i></a>
+            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}" ng-init="showForm = true" ng-click="showForm = !showForm" class="fas fa-window-minimize"></i></a>
         </h4>
-        <form class="institution-form">
+        <form class="institution-form" ng-show="showForm">
             <div class="row">
                 <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
                     <input type="text" id="nomeONG" name="nomeONG" class="form-control"
@@ -73,3 +73,26 @@
         </form>
     </div>
 </div>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Nome</th>
+        <th scope="col">CNPJ</th>
+        <th scope="col">Localização</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td>Associação de Amigos Crianças do Lar Abdon Batista</td>
+        <td>99.999.999/9999-99</td>
+        <td>Joinville/SC</td>
+        <td class="icons">
+            <a class="btn btn-sm button-edit " ng-click="specialityCtrl.openModal('lg');" ><i class="fas fa-pencil-alt"></i></a>
+            <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
+        </td>
+    </tr>
+    </tbody>
+</table>

@@ -2,9 +2,9 @@
 <div class="donate-register">
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de Doações
-            <a href="#" title="Minimizar"><i class="fas fa-window-minimize"></i></a>
+            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}" ng-init="showForm = true" ng-click="showForm = !showForm" class="fas fa-window-minimize"></i></a>
         </h4>
-        <form class="donate-form">
+        <form class="donate-form" ng-show="showForm">
             <div class="row">
                 <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
                     <select type="text" id="tipoDoacao" name="tipoDoacao" class="form-control">
@@ -62,3 +62,36 @@
         </form>
     </div>
 </div>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Clínica</th>
+        <th scope="col">Complexidade</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td>Consulta</td>
+        <td>Clínica Volte a Sorrir</td>
+        <td>Alta</td>
+        <td class="icons">
+            <a class="btn btn-sm button-edit " ng-click="specialityCtrl.openModal('lg');" ><i class="fas fa-pencil-alt"></i></a>
+            <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">2</th>
+        <td>Exames</td>
+        <td>Consultório Gimenez</td>
+        <td>Baixa</td>
+        <td class="icons">
+            <a class="btn btn-sm button-edit"><i class="fas fa-pencil-alt"></i></a>
+            <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
+        </td>
+    </tr>
+    </tbody>
+</table>

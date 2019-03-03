@@ -2,9 +2,9 @@
 <div class="medic-register">
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de Especialista
-            <a href="#" title="Minimizar"><i class="fas fa-window-minimize"></i></a>
+            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}" ng-init="showForm = true" ng-click="showForm = !showForm"class="fas fa-window-minimize"></i></a>
         </h4>
-        <form class="medic-form">
+        <form class="medic-form" ng-show="showForm">
             <div class="row">
                 <label class="col-md-6">
                     <input class="form-control input nome" type="text"
@@ -66,3 +66,29 @@
         </form>
         </form>
     </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Especialidade</th>
+            <th scope="col">Cidade</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>José Pereira Costa</td>
+            <td>(47) 99655-8632</td>
+            <td>Dentista</td>
+            <td>Joinville</td>
+            <td class="icons">
+                <a class="btn btn-sm button-edit " ng-click="specialityCtrl.openModal('lg');"><i
+                        class="fas fa-pencil-alt"></i></a>
+                <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>

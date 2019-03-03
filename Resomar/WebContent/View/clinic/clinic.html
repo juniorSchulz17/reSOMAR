@@ -1,21 +1,25 @@
 
 <link rel="stylesheet" href="View/clinic/clinic.css"/>
-<div class="clinic-register">
+<div class="clinic-register">ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}" ng-init="showForm = true" ng-click="showForm = !showForm"
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de Clínica
         <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}" ng-init="showForm = true" ng-click="showForm = !showForm"></i></a>
         </h4>
         <form class="clinic-form" ng-show="showForm">
             <div class="row">
-                <label class="col-md-6">
+                <label class="col-md-8">
                     <input class="form-control input nomeClinica" type="text"
                            placeholder="Nome da Clínica" name="nomeClinica">
                 </label>
-                <label class="col-md-3">
+                <label class="col-md-2">
+                    <input class="form-control input" type="text" placeholder="Telefone"
+                           id="telefone" name="telefone">
+                </label>
+                <label class="col-md-2">
                     <input class="form-control input" type="text" placeholder="CNPJ"
                            id="CNPJ" name="CNPJ">
                 </label>
-                <label class="col-md-3">
+                <label class="col-md-2">
                     <input class="form-control input" type="text" placeholder="CEP"
                            id="CEP" name="CEP">
                 </label>
@@ -27,7 +31,7 @@
                     <input class="form-control input" type="text" placeholder="Nº"
                            id="numero" name="Numero">
                 </label>
-                <label class="col-md-3">
+                <label class="col-md-4">
                     <input class="form-control input" type="text" placeholder="Bairro"
                            id="Bairro" name="Bairro">
                 </label>
@@ -39,7 +43,7 @@
                     <input class="form-control input" type="text" placeholder="UF"
                            id="Estado" name="Estado">
                 </label>
-                <label class="col-md-4">
+                <label class="col-md-3">
                     <input class="form-control input" type="text" placeholder="Complemento"
                            id="Complemento" name="Complemento">
                 </label>
@@ -51,4 +55,37 @@
         </form>
     </div>
 </div>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Telefone</th>
+        <th scope="col">Cidade</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td>Clínica Volte a Sorrir</td>
+        <td>(47) 99655-8632</td>
+        <td>Joinville</td>
+        <td class="icons">
+            <a class="btn btn-sm button-edit " ng-click="specialityCtrl.openModal('lg');" ><i class="fas fa-pencil-alt"></i></a>
+            <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">2</th>
+        <td>Consultório Gimenez</td>
+        <td>(47) 99655-8632</td>
+        <td>Joinville</td>
+        <td class="icons">
+            <a class="btn btn-sm button-edit"><i class="fas fa-pencil-alt"></i></a>
+            <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
+        </td>
+    </tr>
+    </tbody>
+</table>
 
