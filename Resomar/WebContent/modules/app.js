@@ -34,7 +34,7 @@ angular.module('app').config(
             // controllerAs : 'homeCtrl'
 
         }).when('/especialidade', {
-            templateUrl: 'View/specialty/specialty.html',
+            templateUrl: 'View/speciality/speciality.html',
             controller : 'specialityController',
             controllerAs : 'specialityCtrl'
 
