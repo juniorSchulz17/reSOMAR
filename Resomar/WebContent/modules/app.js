@@ -34,7 +34,7 @@ angular.module('app').config(
             // controllerAs : 'homeCtrl'
 
         }).when('/especialidade', {
-            templateUrl: 'View/specialty/specialty.html',
+            templateUrl: 'View/speciality/speciality.html',
             controller : 'specialityController',
             controllerAs : 'specialityCtrl'
 
@@ -44,9 +44,9 @@ angular.module('app').config(
             // controllerAs : 'homeCtrl'
 
         }).when('/especialista', {
-            templateUrl: 'View/specialist/specialist.html'
-            // controller : 'homeController',
-            // controllerAs : 'homeCtrl'
+            templateUrl: 'View/specialist/specialist.html',
+            controller : 'specialistController',
+            controllerAs : 'specialistCtrl'
 
         }).when('/necessidade', {
             templateUrl: 'View/needs/needs.html'

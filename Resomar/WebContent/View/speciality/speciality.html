@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="View/specialty/specialty.css"/>
+<link rel="stylesheet" href="View/speciality/speciality.css"/>
 
 <title>Especialidade</title>
 
@@ -19,7 +19,6 @@
                            ng-class="{'invalid':formSpeciality.speciality.$invalid && formSpeciality.speciality.$touched}" ng-model="specialityCtrl.speciality" required>
                 </div>
                 <div class="buttons col-md-12">
-                    <input type="button" class="btn btn-cancel" ng-click="specialityCtrl.closeModal();" value="Cancelar">
                     <input type="button" class="btn btn-save" ng-click="specialityCtrl.validateSpeciality();" value="Cadastrar">
                 </div>
             </div>
@@ -41,22 +40,6 @@
         <td class="icons">
             <a class="btn btn-sm button-edit " ng-click="specialityCtrl.openModal('lg');" ><i class="fas fa-pencil-alt"></i></a>
             <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
-        </td>
-    </tr>
-    <tr>
-        <th scope="row">2</th>
-        <td>Cirurgião</td>
-        <td class="icons">
-            <a class="btn btn-sm button-edit"><i class="fas fa-pencil-alt"></i></a>
-                <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
-        </td>
-    </tr>
-    <tr>
-        <th scope="row">3</th>
-        <td>Pediatra</td>
-        <td class="icons">
-            <a class="btn btn-sm button-edit"><i class="fas fa-pencil-alt"></i></a>
-                <a class="btn btn-sm button-trash"> <i class="fas fa-trash-alt"></i></a>
         </td>
     </tr>
     </tbody>

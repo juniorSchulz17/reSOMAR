@@ -33,15 +33,6 @@
     background: #85793C;
     color: white;
 }
-
-.btn-cancel:hover {
-    background: #695f2f;
-}
-
-.btn-save:hover {
-    background: #162b22;
-}
-
 .fa-window-minimize {
     float: right;
     color: #bdbdbd;
