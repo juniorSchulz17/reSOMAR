@@ -1,4 +1,4 @@
-angular.module("app").controller("specialityController", function ($uibModal, $log) {
+angular.module("app").controller("specialityController", function ($uibModal) {
     const _self = this;
 
     //validate input in add
@@ -24,7 +24,7 @@ angular.module("app").controller("specialityController", function ($uibModal, $l
     _self.openModal = (size) => {
         var modalInstance = $uibModal.open({
             animation: true,
-            templateUrl: 'View/specialty/editModal.html',
+            templateUrl: 'View/speciality/editModal.html',
             controller: 'specialityController',
             controllerAs: 'specialityCtrl',
             size: size,
