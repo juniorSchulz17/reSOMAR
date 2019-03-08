@@ -1,12 +1,11 @@
 <link rel="stylesheet" href="View/home/home.css"/>
+
 <div class="dashboard">
     <div class="card fast-acess bg-light" style="max-width: 73rem;">
         <h4 class="card-header">Acesso Rápido
-            <a title="Minimizar"><i ng-class="{'fas fa-plus':!showAccess, 'fas fa-window-minimize':showAccess}"
-                                    ng-init="showAccess = true" ng-click="showAccess = !showAccess"></i></a>
+            <a title="Minimizar"><i ng-click="hideElementAccess()" class="minimize fas fa-window-minimize"></i></a>
         </h4>
-        <div ng-show="showAccess" ng-class="{'animated zoomOut': !showAccess, 'animated zoomIn':showAccess}"
-             class="card-body row">
+        <div class="card-access card-body row">
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
@@ -78,10 +77,10 @@
     <p>
     <div class="card fast-acess-grafic bg-light mb-3 row" style="max-width: 73rem;">
         <h4 class="card-header ">Informações
-            <a title="Minimizar"><i ng-class="{'fas fa-plus':!showInf, 'fas fa-window-minimize':showInf}"
+            <a title="Minimizar"><i ng-click="hideElementGrafic()" ng-class="{'fas fa-plus':!showInf, 'fas fa-window-minimize':showInf}"
                                     ng-init="showInf = true" ng-click="showInf = !showInf"></i></a>
         </h4>
-        <div ng-class="{'animated zoomOut': !showInf, 'animated zoomIn':showInf}" ng-show="showInf" class="card-deck">
+        <div ng-show="showInf" class="card-grafic card-deck">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Gráfico 1</h5>

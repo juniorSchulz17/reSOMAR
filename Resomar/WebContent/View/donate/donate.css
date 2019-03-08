@@ -130,3 +130,7 @@ a {
 a {
     color: inherit;
 }
+
+.hide {
+    display: none !important;
+}
