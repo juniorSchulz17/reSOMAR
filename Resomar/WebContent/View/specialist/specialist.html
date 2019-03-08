@@ -2,53 +2,61 @@
 <div class="medic-register">
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de Especialista
-            <a title="Minimizar"><i ng-class="{'fas fa-plus':!showAccess, 'fas fa-window-minimize':showAccess}"
-                                    ng-init="showAccess = true" ng-click="showAccess = !showAccess"
+            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}"
+                                    ng-init="showForm = true" ng-click="showForm = !showForm"
                                     class="fas fa-window-minimize"></i></a>
         </h4>
-        <form ng-show="showAccess" class="medic-form" name="formSpecialist">
-            <div class="row">
-                <div class="col-md-6 inputs">
-                    <label ng-if="formSpecialist.name.$valid">Nome</label>
+        <form class="specialist-form" ng-show="showForm" name="specialistForm">
+            <div class="specialist-add row">
+                <div class="col-md-6">
                     <input class="form-control input nome" type="text"
-                           placeholder="Nome" name="name" ng-class="{'invalid':formSpecialist.name.$invalid && formSpecialist.name.$touched}" ng-model="specialistCtrl.name" required>
+                           placeholder="Nome" name="name"
+                           ng-class="{'invalid':specialistForm.name.$invalid && specialistForm.name.$touched}"
+                           ng-model="specialistCtrl.newSpecialist.name" required>
                 </div>
-                <div class="col-md-6 inputs">
-                    <label ng-if="formSpecialist.lastName.$valid">Sobrenome</label>
+                <label class="col-md-6">
                     <input class="form-control input" type="text" placeholder="Sobrenome"
-                           id="sobrenome" name="lastName" ng-class="{'invalid':formSpecialist.lastName.$invalid && formSpecialist.lastName.$touched}" ng-model="specialistCtrl.lastName" required>
-                </div>
-                <div class="col-md-6 inputs">
-                    <label ng-if="formSpecialist.email.$valid">Email</label>
+                           id="sobrenome" name="lastName"
+                           ng-class="{'invalid':specialistForm.lastName.$invalid && specialistForm.lastName.$touched}"
+                           ng-model="specialistCtrl.newSpecialist.lastName" required>
+                </label>
+                <label class="col-md-6">
                     <input class="form-control input" type="text" placeholder="Email"
-                           id="email" name="email" ng-class="{'invalid':formSpecialist.email.$invalid && formSpecialist.email.$touched}" ng-model="specialistCtrl.email" required>
-                </div>
-                <div class="col-md-3 inputs">
-                    <label ng-if="formSpecialist.landLine.$valid">Telefone Fixo</label>
+                           id="email" name="email"
+                           ng-class="{'invalid':specialistForm.email.$invalid && specialistForm.email.$touched}"
+                           ng-model="specialistCtrl.newSpecialist.email" required>
+                </label>
+                <label class="col-md-3">
                     <input class="form-control input" type="text" placeholder="Telefone Fixo"
-                           id="telefone" name="landLine" ng-class="{'invalid':formSpecialist.landLine.$invalid && formSpecialist.landLine.$touched}" ng-model="specialistCtrl.landLine" required>
-                </div>
-                <div class="col-md-3 inputs">
-                    <label ng-if="formSpecialist.celPhone.$valid">Celular</label>
+                           id="telefone" name="landLine"
+                           ng-class="{'invalid':specialistForm.landLine.$invalid && specialistForm.landLine.$touched}"
+                           ng-model="specialistCtrl.newSpecialist.landLine" required>
+                </label>
+                <label class="col-md-3">
                     <input class="form-control input" type="text" placeholder="Celular"
-                           id="Celular" name="celPhone" ng-class="{'invalid':formSpecialist.celPhone.$invalid && formSpecialist.celPhone.$touched}" ng-model="specialistCtrl.celPhone" required>
-                </div>
-                <div class="col-md-6 inputs">
-                    <label ng-if="formSpecialist.advice.$valid">Conselho</label>
-                    <select class="form-control" name="advice" ng-class="{'invalid':formSpecialist.advice.$invalid && formSpecialist.advice.$touched}" ng-model="specialistCtrl.advice" required>
+                           id="Celular" name="celPhone"
+                           ng-class="{'invalid':specialistForm.celPhone.$invalid && specialistForm.celPhone.$touched}"
+                           ng-model="specialistCtrl.newSpecialist.celPhone" required>
+                </label>
+                <label class="col-md-6">
+                    <select class="form-control" name="advice"
+                            ng-class="{'invalid':specialistForm.advice.$invalid && specialistForm.advice.$touched}"
+                            ng-model="specialistCtrl.newSpecialist.advice" required>
                         <option value="">Selecione o conselho</option>
                         <option value="CRM">CRM</option>
                         <option value="CRO">CRO</option>
                     </select>
-                </div>
-                <div class="col-md-6 inputs">
-                    <label ng-if="formSpecialist.adviceNumber.$valid">N do Conselho</label>
+                </label>
+                <label class="col-md-6">
                     <input class="form-control input" type="text" placeholder="Nº do Conselho"
-                           id="numeroConselho" name="adviceNumber" ng-class="{'invalid':formSpecialist.adviceNumber.$invalid && formSpecialist.adviceNumber.$touched}" ng-model="specialistCtrl.adviceNumber" required>
-                </div>
-                <div class="col-md-6 inputs">
-                    <label ng-if="formSpecialist.speciality.$valid">Especialidade</label>
-                    <select class="form-control" name="speciality" ng-class="{'invalid':formSpecialist.speciality.$invalid && formSpecialist.speciality.$touched}" ng-model="specialistCtrl.speciality" required>
+                           id="numeroConselho" name="adviceNumber"
+                           ng-class="{'invalid':specialistForm.adviceNumber.$invalid && specialistForm.adviceNumber.$touched}"
+                           ng-model="specialistCtrl.newSpecialist.adviceNumber" required>
+                </label>
+                <label class="col-md-6">
+                    <select class="form-control" name="speciality"
+                            ng-class="{'invalid':specialistForm.speciality.$invalid && specialistForm.speciality.$touched}"
+                            ng-model="specialistCtrl.newSpecialist.speciality" required>
                         <option value="">Especialidade</option>
                         <option value="ALERGIA E IMUNOLOGIA">ALERGIA E IMUNOLOGIA</option>
                         <option value="ANESTESIOLOGIA ">ANESTESIOLOGIA</option>
@@ -60,20 +68,20 @@
                         </option>
                         <option value="CIRURGIA DO TRAUMA">CIRURGIA DO TRAUMA</option>
                     </select>
-                </div>
-                <div class="col-md-6 inputs">
-                    <label ng-if="formSpecialist.clinic.$valid">Clínica</label>
-                    <select class="form-control" name="clinic" ng-model="specialistCtrl.clinic" required>
+                </label>
+                <label class="col-md-6">
+                    <select class="form-control" name="clinic"
+                            ng-model="specialistCtrl.newSpecialist.clinic" required>
                         <option value="">Clínica</option>
                         <option value="1">Clíninca Curumim, Rua Doutor João Collin, 11, Joinville/SC</option>
                         <option value="2 ">Clínica Volte a Sorrir, Rua Jacob, 88, Joinville/SC</option>
                     </select>
-                </div>
-                <div class="buttons col-md-12">
-                    <input type="button" class="btn btn-save" ng-click="specialistCtrl.validateSpecialistForm();" value="Cadastrar">
+                </label>
+                <div class="buttons col-md-12" style="text-align:right;">
+                    <input type="button" class="btn btn-save" value="Cadastrar"
+                           ng-click="specialistCtrl.validateSpecialistForm();">
                 </div>
             </div>
-        </form>
         </form>
     </div>
 </div>
@@ -82,27 +90,19 @@
     <tr>
         <th scope="col">Código</th>
         <th scope="col">Nome</th>
-        <th scope="col">Email</th>
         <th scope="col">Telefone</th>
-        <th scope="col">Celular</th>
-        <th scope="col">Conselho</th>
-        <th scope="col">N Conselho</th>
         <th scope="col">Especialidade</th>
+        <th scope="col">Cidade</th>
         <th></th>
     </tr>
     </thead>
     <tbody>
     <tr>
         <th scope="row">1</th>
-        <td>Dr. Romário</td>
-        <td>romario@gmail.com</td>
-        <td>(47) 34788-9955</td>
-        <td>(47) 9 9708-2416</td>
-        <td>CRM</td>
-        <td>123456</td>
-        <td>Clínico Geral</td>
-
-
+        <td>José Pereira Costa</td>
+        <td>(47) 99655-8632</td>
+        <td>Dentista</td>
+        <td>Joinville</td>
         <td class="icons">
             <a class="btn btn-sm button-edit " ng-click="specialistCtrl.openModal('lg');"><i
                     class="fas fa-pencil-alt"></i></a>

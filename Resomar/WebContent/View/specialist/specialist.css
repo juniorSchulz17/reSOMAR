@@ -11,7 +11,7 @@
     margin-right: 1.5%;
 }
 
-.medic-form {
+.specialist-add {
     padding: 30px !important;
 }
 
@@ -102,9 +102,4 @@ a {
 }
 .inputs {
     margin-top: 5px;
-}
-label {
-    font-size: 14px;
-    font-family: inherit;
-    color: #495057;
 }

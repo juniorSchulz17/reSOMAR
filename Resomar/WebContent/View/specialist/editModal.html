@@ -3,15 +3,77 @@
     <h4 class="title-header">Editar Especialista</h4>
 </div>
 <div class="modal-body" id="modal-body">
-    <form name="formSpecialityEdit"
-          class="specialty-form-modal">
-        <div class="row">
-
-            <div class="col-md-4">
-                <label ng-if="formSpecialityEdit.specialityEdit.$valid">Especialidade</label>
-                <input class="form-control input"  name="specialityEdit" placeholder="Especialidade" focus="true"
-                       ng-class="{'invalid':formSpecialityEdit.specialityEdit.$invalid && formSpecialityEdit.specialityEdit.$touched}" ng-model="specialityCtrl.specialityEdit" required>
+    <form class="specialist-form"  name="specialistForm">
+        <div class="specialist-add row">
+            <div class="col-md-6">
+                <input class="form-control input nome" type="text"
+                       placeholder="Nome" name="name"
+                       ng-class="{'invalid':specialistForm.name.$invalid && specialistForm.name.$touched}"
+                       ng-model="specialistCtrl.editSpecialist.name" required>
             </div>
+            <label class="col-md-6">
+                <input class="form-control input" type="text" placeholder="Sobrenome"
+                       id="sobrenome" name="lastName"
+                       ng-class="{'invalid':specialistForm.lastName.$invalid && specialistForm.lastName.$touched}"
+                       ng-model="specialistCtrl.editSpecialist.lastName" required>
+            </label>
+            <label class="col-md-6">
+                <input class="form-control input" type="text" placeholder="Email"
+                       id="email" name="email"
+                       ng-class="{'invalid':specialistForm.email.$invalid && specialistForm.email.$touched}"
+                       ng-model="specialistCtrl.editSpecialist.email" required>
+            </label>
+            <label class="col-md-3">
+                <input class="form-control input" type="text" placeholder="Telefone Fixo"
+                       id="telefone" name="landLine"
+                       ng-class="{'invalid':specialistForm.landLine.$invalid && specialistForm.landLine.$touched}"
+                       ng-model="specialistCtrl.editSpecialist.landLine" required>
+            </label>
+            <label class="col-md-3">
+                <input class="form-control input" type="text" placeholder="Celular"
+                       id="Celular" name="celPhone"
+                       ng-class="{'invalid':specialistForm.celPhone.$invalid && specialistForm.celPhone.$touched}"
+                       ng-model="specialistCtrl.editSpecialist.celPhone" required>
+            </label>
+            <label class="col-md-6">
+                <select class="form-control" name="advice"
+                        ng-class="{'invalid':specialistForm.advice.$invalid && specialistForm.advice.$touched}"
+                        ng-model="specialistCtrl.editSpecialist.advice" required>
+                    <option value="">Selecione o conselho</option>
+                    <option value="CRM">CRM</option>
+                    <option value="CRO">CRO</option>
+                </select>
+            </label>
+            <label class="col-md-6">
+                <input class="form-control input" type="text" placeholder="Nº do Conselho"
+                       id="numeroConselho" name="adviceNumber"
+                       ng-class="{'invalid':specialistForm.adviceNumber.$invalid && specialistForm.adviceNumber.$touched}"
+                       ng-model="specialistCtrl.editSpecialist.adviceNumber" required>
+            </label>
+            <label class="col-md-6">
+                <select class="form-control" name="speciality"
+                        ng-class="{'invalid':specialistForm.speciality.$invalid && specialistForm.speciality.$touched}"
+                        ng-model="specialistCtrl.editSpecialist.speciality" required>
+                    <option value="">Especialidade</option>
+                    <option value="ALERGIA E IMUNOLOGIA">ALERGIA E IMUNOLOGIA</option>
+                    <option value="ANESTESIOLOGIA ">ANESTESIOLOGIA</option>
+                    <option value="CARDIOLOGIA">CARDIOLOGIA</option>
+                    <option value="CIRURGIA CARDIOVASCULAR">CIRURGIA CARDIOVASCULAR</option>
+                    <option value="CIRURGIA DE CABEÇA E PESCOÇO ">CIRURGIA DE CABEÇA E PESCOÇO</option>
+                    <option value="CIRURGIA DO APARELHO DIGESTIVO/CIRURGIA GERAL/GASTROCIRURGIA">CIRURGIA DO
+                        APARELHO DIGESTIVO/CIRURGIA GERAL/GASTROCIRURGIA
+                    </option>
+                    <option value="CIRURGIA DO TRAUMA">CIRURGIA DO TRAUMA</option>
+                </select>
+            </label>
+            <label class="col-md-6">
+                <select class="form-control" name="clinic"
+                        ng-model="specialistCtrl.editSpecialist.clinic" required>
+                    <option value="">Clínica</option>
+                    <option value="1">Clíninca Curumim, Rua Doutor João Collin, 11, Joinville/SC</option>
+                    <option value="2 ">Clínica Volte a Sorrir, Rua Jacob, 88, Joinville/SC</option>
+                </select>
+            </label>
         </div>
     </form>
 </div>
