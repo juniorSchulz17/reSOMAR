@@ -1,5 +1,6 @@
 .medic-register {
     float: right;
+    margin-right: 3.5%;
     margin-right: 2%;
     width: 99.7%;
 }
@@ -10,7 +11,7 @@
     margin-right: 1.5%;
 }
 
-.medic-form {
+.specialist-add {
     padding: 30px !important;
 }
 
@@ -24,23 +25,14 @@
 }
 
 .btn-cancel {
-    background: #85793C;
-    color: white;
-}
-
-.btn-save {
     background: #1E3B2F;
     color: white;
 }
 
-.btn-cancel:hover {
-    background: #695f2f;
+.btn-save {
+    background: #85793C;
+    color: white;
 }
-
-.btn-save:hover {
-    background: #162b22;
-}
-
 .fa-window-minimize {
     float: right;
     color: #bdbdbd;
@@ -57,14 +49,24 @@
     margin: 0 auto;
     margin-top: 2px;
 }
-
-a {
-    color: inherit;
+.fa-plus {
+    float: right;
+    color: #bdbdbd;
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 5px;
 }
 
+.fa-plus:hover {
+    float: right;
+    color: #a1a1a1;
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 5px;
+}
 .table-striped {
     width: 76%;
-    margin-right: 30px;
+    margin-right: 55px;
     float: right;
     margin-top: 20px;
 }
@@ -82,7 +84,6 @@ a {
 .icons {
     float: right;
 }
-
 .button-edit {
     background: #85793c;
 }
@@ -93,40 +94,12 @@ a {
 .invalid {
     border-color: red;
 }
-
-.fa-window-minimize {
-    float: right;
-    color: #bdbdbd;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 2px;
+.buttons {
+    text-align: right;
 }
-.fa-plus {
-    float: right;
-    color: #bdbdbd;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 7px;
-}
-
-.fa-window-minimize:hover {
-    float: right;
-    color: #a1a1a1;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 0 auto;
-    margin-top: 2px;
-}
-
-.fa-plus:hover {
-    float: right;
-    color: #a1a1a1;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 0 auto;
-    margin-top: 7px;
-}
-
 a {
     color: inherit;
+}
+.inputs {
+    margin-top: 5px;
 }
