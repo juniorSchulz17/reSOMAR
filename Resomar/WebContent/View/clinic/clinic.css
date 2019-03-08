@@ -76,3 +76,36 @@
 a {
     color: inherit;
 }
+
+.table-striped {
+    width: 76%;
+    margin-right: 55px;
+    float: right;
+    margin-top: 20px;
+}
+
+.fa-pencil-alt {
+    font-size: 13px;
+    color: white;
+}
+
+.fa-trash-alt {
+    font-size: 13px;
+    color: white;
+}
+
+.icons {
+    float: right;
+}
+
+.button-edit {
+    background: #85793c;
+}
+
+.button-trash {
+    background: #1E3B2F;
+}
+.invalid {
+    border-color: red;
+}
+

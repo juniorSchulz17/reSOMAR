@@ -2,9 +2,9 @@
 <div class="needs-register">
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de Necessidades
-            <a href="#" title="Minimizar"><i class="fas fa-window-minimize"></i></a>
+            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}" ng-init="showForm = true" ng-click="showForm = !showForm" class="fas fa-window-minimize"></i></a>
         </h4>
-        <form class="needs-form">
+        <form class="needs-form" ng-show="showForm">
             <div class="row">
                 <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
                     <select type="text" id="tipoNecessidade" name="tipoNecessidade" class="form-control">
@@ -33,3 +33,26 @@
         </form>
     </div>
 </div>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Grau</th>
+        <th scope="col">Observação</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td>Médica</td>
+        <td>Baixa</td>
+        <td>Exame de Sangue</td>
+        <td class="icons">
+            <a class="btn btn-sm button-edit " ng-click="specialityCtrl.openModal('lg');" ><i class="fas fa-pencil-alt"></i></a>
+            <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
+        </td>
+    </tr>
+    </tbody>
+</table>

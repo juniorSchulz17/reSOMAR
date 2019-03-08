@@ -2,9 +2,9 @@
 <div class="patient-register">
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de Paciente
-            <a href="#" title="Minimizar"><i class="fas fa-window-minimize"></i></a>
+            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}" ng-init="showForm = true" ng-click="showForm = !showForm" class="fas fa-window-minimize"></i></a>
         </h4>
-        <form class="patient-form">
+        <form class="patient-form" ng-show="showForm">
             <div class="row">
                 <label class="col-md-12">
                     <input class="form-control input Identificacão" type="text"
@@ -34,3 +34,26 @@
         </form>
     </div>
 </div>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Identificação</th>
+        <th scope="col">Responsável</th>
+        <th scope="col">Instituição Responsável</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td>Paciente 1</td>
+        <td>José Pereira Costa</td>
+        <td>Associação de Amigos Crianças do Lar Abdon Batista</td>
+        <td class="icons">
+            <a class="btn btn-sm button-edit " ng-click="specialityCtrl.openModal('lg');" ><i class="fas fa-pencil-alt"></i></a>
+            <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
+        </td>
+    </tr>
+    </tbody>
+</table>
