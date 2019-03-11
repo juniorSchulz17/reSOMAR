@@ -1,9 +1,9 @@
 .user-sec h2 {
-     margin-bottom: 30px;
-     font-weight: 800;
-     font-size: 30px;
-     color: #1E3B2F;
- }
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 30px;
+    color: #1E3B2F;
+}
 
 .user-sec h2:after {
     content: " ";
@@ -134,3 +134,4 @@ body {
 .radio-set {
     margin-left: 2px !important;
 }
+

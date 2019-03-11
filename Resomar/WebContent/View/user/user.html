@@ -11,9 +11,9 @@
         <div class="row">
             <div class="col-md-4 login-sec">
                 <h2 class="text-center">Cadastro de Usuário</h2>
-                <form class="user-form" name="formUserRegister">
+                <form id="user-form" class="user-form" name="formUserRegister">
                     <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                        <input class="form-control" placeholder="Nome">
+                        <input type="text" class="form-control" placeholder="Nome">
                     </label>
                     <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
                         <input class="form-control" placeholder="Sobrenome">
@@ -49,11 +49,12 @@
                             <label class="form-check-label" for="materialInline3">ONG</label>
                         </div>
                     </div>
-                    <div class="buttons col-md-12" style="text-align:right;margin-top: 10px">
+                </form>
+                    <div class="buttons col-md-12" style="text-align:right; margin-top: 10px">
                         <input type="button" class="btn btn-cancel" value="Cancelar">
                         <input type="button" class="btn btn-save" value="Cadastrar">
                     </div>
-                </form>
+
             </div>
             <div class="col-md-8 banner-sec">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
