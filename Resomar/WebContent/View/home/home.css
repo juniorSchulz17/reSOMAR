@@ -430,12 +430,9 @@ html { height: 100%;}
 .card-deck {
     padding: 30px;
 }
-
-.card-body {
+.card-access {
     padding: 30px;
-    padding-bottom: 15px;
 }
-
 .dashboard {
     float: right;
     width: 102%;

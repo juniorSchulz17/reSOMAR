@@ -1,6 +1,7 @@
-angular.module('app').controller('homeController', ['$scope', function($scope){
+angular.module('app').controller('homeController', function(){
+    const _self = this;
 
-    $scope.hideElementAccess = function() {
+    _self.hideElementAccess = () => {
         $('.card-access').animate({
             height: "toggle"
         }, 700, function() {
@@ -8,11 +9,11 @@ angular.module('app').controller('homeController', ['$scope', function($scope){
         });
     }
 
-    $scope.hideElementGrafic = function() {
+    _self.hideElementGrafic = () => {
         $('.card-grafic').animate({
                 height: "toggle"
         }, 700, function() {
             // Animation complete.
         });
     }
-}]);
+});

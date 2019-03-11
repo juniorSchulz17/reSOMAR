@@ -2,26 +2,25 @@
 
 <title>Especialidade</title>
 
-<div class="specialty-register">
+<div class="speciality-register">
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de Especialidade
-            <a title="Minimizar"><i ng-class="{'fas fa-plus':!showAccess, 'fas fa-window-minimize':showAccess}"
-                                    ng-init="showAccess = true" ng-click="showAccess = !showAccess"
-                                    class="fas fa-window-minimize"></i></a>
+            <a title="Minimizar"><i ng-class="{'fas fa-plus':changeIcon, 'fas fa-window-minimize':!changeIcon}"
+                                    ng-init="changeIcon = true"
+                                    ng-click="changeIcon = !changeIcon;"
+                                    class="fas fa-plus"></i></a>
         </h4>
-        <form ng-show="showAccess" name="formSpeciality"
-              class="specialty-form">
-            <div class="row">
-
-                <div class="col-md-4">
+        <form class="speciality-form" name="formSpeciality">
+            <div ng-show="!changeIcon" class="speciality-add row">
+                <div class="col-md-6">
                     <label ng-if="formSpeciality.speciality.$valid">Especialidade</label>
                     <input class="form-control input" name="speciality" placeholder="Especialidade"
                            ng-class="{'invalid':formSpeciality.speciality.$invalid && formSpeciality.speciality.$touched}"
-                           ng-model="specialityCtrl.speciality" required>
+                           ng-model="specialityCtrl.newSpeciality.speciality" required>
                 </div>
                 <div class="buttons col-md-12">
-                    <input type="button" class="btn btn-save" ng-click="specialityCtrl.validateSpeciality();"
-                           value="Cadastrar">
+                    <input type="button" class="btn btn-save" value="Cadastrar"
+                           ng-click="specialityCtrl.validateSpeciality();">
                 </div>
             </div>
         </form>

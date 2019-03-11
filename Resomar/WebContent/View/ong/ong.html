@@ -1,10 +1,10 @@
-<link rel="stylesheet" href="View/institution/institution.css"/>
+<link rel="stylesheet" href="View/ong/ong.css"/>
 <div class="institution-register">
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de ONG
-            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}" ng-init="showForm = true" ng-click="showForm = !showForm" class="fas fa-window-minimize"></i></a>
+            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': !changeIcon, 'fas fa-plus': changeIcon}" ng-init="changeIcon = true" ng-click="changeIcon = !changeIcon" class="fas fa-plus"></i></a>
         </h4>
-        <form class="institution-form" ng-show="showForm">
+        <form class="institution-form" ng-show="changeIcon">
             <div class="row">
                 <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
                     <input type="text" id="nomeONG" name="nomeONG" class="form-control"

@@ -1,19 +1,21 @@
 angular.module("app").controller("specialityController", function ($uibModal) {
     const _self = this;
+    _self.newSpeciality = {};
+    _self.editSpeciality = {};
 
     //validate input in add
     _self.validateSpeciality = () => {
-        if (!_self.speciality) {
+        if (!_self.newSpeciality.speciality) {
             alert("Informe a especilidade");
             return false;
         }
         alert("Parabéns");
-        _self.speciality = null;
+        _self.newSpeciality.speciality = null;
     }
 
     //validate input in modal
     _self.validateSpecialityEdit = () => {
-        if (!_self.specialityEdit) {
+        if (!_self.editSpeciality.specialityEdit) {
             alert("Informe a especilidade");
             return false;
         }
@@ -36,6 +38,6 @@ angular.module("app").controller("specialityController", function ($uibModal) {
 
     //close modal function
     _self.closeModal = () => {
-       $uibModal.modal.close();
+        $uibModal.modal.close();
     }
 });

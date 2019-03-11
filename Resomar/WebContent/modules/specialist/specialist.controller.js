@@ -98,4 +98,13 @@ angular.module("app").controller("specialistController", function ($uibModal) {
     _self.teste = () => {
         console.log(_self.icon);
     }
+
+    //animation hide form
+    _self.hideForm = () => {
+        $('.specialist-form').animate({
+            height: "toggle"
+        }, 700, function() {
+            // Animation complete.
+        });
+    }
 });

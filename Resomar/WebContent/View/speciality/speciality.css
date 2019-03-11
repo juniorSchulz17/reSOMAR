@@ -1,17 +1,17 @@
-.specialty-register {
+.speciality-register {
     float: right;
     margin-right: 2%;
     width: 99.7%;
+}
+
+.speciality-add {
+    padding: 30px !important;
 }
 
 .fast-acess {
     margin-left: 22%;
     margin-top: 2%;
     margin-right: 1.5%;
-}
-
-.specialty-form {
-    padding: 30px !important;
 }
 
 .card-header {

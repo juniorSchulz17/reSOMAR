@@ -1,11 +1,10 @@
 <link rel="stylesheet" href="View/home/home.css"/>
 
 <div class="dashboard">
-    <div class="card fast-acess bg-light" style="max-width: 73rem;">
+    <div class="fast-acess bg-light" style="max-width: 73rem;">
         <h4 class="card-header">Acesso Rápido
-            <a title="Minimizar"><i ng-click="hideElementAccess()" class="minimize fas fa-window-minimize"></i></a>
         </h4>
-        <div class="card-access card-body row">
+        <div class="card-access row" ng-class="slide-down">
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
@@ -70,27 +69,6 @@
                         <a style="text-decoration:none;" href="#/necessidade" title="Cadastrar Necessidades"
                            class="fa fa-plus-circle"></a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <p>
-    <div class="card fast-acess-grafic bg-light mb-3 row" style="max-width: 73rem;">
-        <h4 class="card-header ">Informações
-            <a title="Minimizar"><i ng-click="hideElementGrafic()" ng-class="{'fas fa-plus':!showInf, 'fas fa-window-minimize':showInf}"
-                                    ng-init="showInf = true" ng-click="showInf = !showInf"></i></a>
-        </h4>
-        <div ng-show="showInf" class="card-grafic card-deck">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Gráfico 1</h5>
-                    <canvas id="pie-chart" width="350" height="400"></canvas>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Gráfico 2</h5>
-                    <canvas id="doughnut-chart" width="350" height="450"></canvas>
                 </div>
             </div>
         </div>

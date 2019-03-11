@@ -38,8 +38,8 @@ angular.module('app').config(
             controller : 'specialityController',
             controllerAs : 'specialityCtrl'
 
-        }).when('/instituicao', {
-            templateUrl: 'View/institution/institution.html'
+        }).when('/ong', {
+            templateUrl: 'View/ong/ong.html'
             // controller : 'homeController',
             // controllerAs : 'homeCtrl'
 

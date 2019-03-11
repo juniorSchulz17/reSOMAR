@@ -2,12 +2,12 @@
 <div class="medic-register">
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de Especialista
-            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}"
-                                    ng-init="showForm = true" ng-click="showForm = !showForm"
-                                    class="fas fa-window-minimize"></i></a>
+            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': !changeIcon, 'fas fa-plus': changeIcon}"
+                                    ng-init="changeIcon = true" ng-click="changeIcon = !changeIcon;"
+                                    class="fas fa-plus"></i></a>
         </h4>
-        <form class="specialist-form" ng-show="showForm" name="specialistForm">
-            <div class="specialist-add row">
+        <form class="specialist-form" name="specialistForm">
+            <div class="specialist-add row" ng-show="!changeIcon">
                 <div class="col-md-6">
                     <input class="form-control input nome" type="text"
                            placeholder="Nome" name="name"
@@ -77,7 +77,7 @@
                         <option value="2 ">Clínica Volte a Sorrir, Rua Jacob, 88, Joinville/SC</option>
                     </select>
                 </label>
-                <div class="buttons col-md-12" style="text-align:right;">
+                <div class="buttons col-md-12">
                     <input type="button" class="btn btn-save" value="Cadastrar"
                            ng-click="specialistCtrl.validateSpecialistForm();">
                 </div>
