@@ -13,19 +13,16 @@
                 <h2 class="text-center">Entrar</h2>
                 <form class="login-form" name="formLogin">
                     <div class="form-group">
-                        <label class="text-uppercase">Nome de Usuário</label>
-                        <input type="text" class="form-control" ng-model="loginCtrl.userName"
+                        <input type="text" id="user" class="form-control" ng-model="loginCtrl.userName"
                                ng-class="{'invalid': formLogin.userName.$invalid && formLogin.userName.$touched}"
-                               focus="true"
-                               placeholder="Nome de Usuário"
-                               name="userName" required>
+                               focus="true" name="userName" required>
+                        <label class="form-control-placeholder" for="user">Usuário</label>
                     </div>
-
-                    <div class="fo  rm-group">
-                        <label class="text-uppercase">Senha</label>
-                        <input type="password" class="form-control" ng-model="loginCtrl.password" placeholder="Senha"
+                    <div class="form-group">
+                        <input type="password" id="password" class="form-control" ng-model="loginCtrl.password"
                                ng-class="{'invalid': formLogin.password.$invalid && formLogin.password.$touched}"
                                name="password" required>
+                        <label class="form-control-placeholder" for="password">Senha</label>
                     </div>
                     <div class="form-check">
                         <button type="submit" class="btn btn-login float-right" ng-click="loginCtrl.validateLogin();">
