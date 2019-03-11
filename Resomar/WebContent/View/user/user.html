@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="View/login/login.css"/>
+    <link rel="stylesheet" href="View/user/user.css"/>
 </head>
 <body>
 <div class="login-block">
@@ -12,21 +12,36 @@
             <div class="col-md-4 login-sec">
                 <h2 class="text-center">Cadastro de Usuário</h2>
                 <form id="user-form" class="user-form" name="formUserRegister">
-                    <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                        <input type="text" class="form-control" placeholder="Nome">
-                    </label>
-                    <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                        <input class="form-control" placeholder="Sobrenome">
-                    </label>
-                    <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                        <input class="form-control" placeholder="Email">
-                    </label>
-                    <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                        <input class="form-control" placeholder="Senha">
-                    </label>
-                    <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                        <input class="form-control" placeholder="Confirmar Senha">
-                    </label>
+                    <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                        <input type="text" id="name" class="form-control" ng-model="userCtrl.name"
+                               ng-class="{'invalid': formUserRegister.name.$invalid && formUserRegister.name.$touched}"
+                               focus="true" name="name" required>
+                        <label class="form-control-placeholder" for="name">Nome</label>
+                    </div>
+                    <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                        <input type="text" id="lastName" class="form-control" ng-model="userCtrl.lastName"
+                               ng-class="{'invalid': formUserRegister.lastName.$invalid && formUserRegister.lastName.$touched}"
+                               name="lastName" required>
+                        <label class="form-control-placeholder" for="lastName">Sobrenome</label>
+                    </div>
+                    <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                        <input type="email" id="email" class="form-control" ng-model="userCtrl.email"
+                               ng-class="{'invalid': formUserRegister.email.$invalid && formUserRegister.email.$touched}"
+                               name="email" required>
+                        <label class="form-control-placeholder" for="email">Email</label>
+                    </div>
+                    <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                        <input type="password" id="password" class="form-control" ng-model="userCtrl.password"
+                               ng-class="{'invalid': formUserRegister.password.$invalid && formUserRegister.password.$touched}"
+                               name="password" required>
+                        <label class="form-control-placeholder" for="password">Senha</label>
+                    </div>
+                    <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                        <input type="password" id="confirmPassword" class="form-control" ng-model="userCtrl.confirmPassword"
+                               ng-class="{'invalid': formUserRegister.confirmPassword.$invalid && formUserRegister.confirmPassword.$touched}"
+                               name="confirmPassword" required>
+                        <label class="form-control-placeholder" for="confirmPassword">Confirmar Senha</label>
+                    </div>
                     <div class="radio-set col-sm-12 col-lg-12 col-xl-12 col-md-12">
                         <!-- Material inline 1 -->
                         <div class="form-check form-check-inline">
@@ -52,7 +67,7 @@
                 </form>
                     <div class="buttons col-md-12" style="text-align:right; margin-top: 10px">
                         <input type="button" class="btn btn-cancel" value="Cancelar">
-                        <input type="button" class="btn btn-save" value="Cadastrar">
+                        <input type="button" class="btn btn-save" ng-click="userCtrl.validateRegister();" value="Cadastrar">
                     </div>
 
             </div>

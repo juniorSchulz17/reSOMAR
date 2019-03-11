@@ -14,9 +14,9 @@ angular.module('app').config(
             controllerAs: 'loginCtrl'
 
         }).when('/usuario', {
-            templateUrl: 'View/user/user.html'
-            // controller: 'loginController',
-            // controllerAs: 'login'
+            templateUrl: 'View/user/user.html',
+            controller: 'userController',
+            controllerAs: 'userCtrl'
 
         }).when('/principal	', {
             templateUrl: 'View/home/home.html'
