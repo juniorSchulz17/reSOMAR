@@ -2,21 +2,30 @@
 <div class="institution-register">
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de ONG
-            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': !changeIcon, 'fas fa-plus': changeIcon}" ng-init="changeIcon = true" ng-click="changeIcon = !changeIcon" class="fas fa-plus"></i></a>
+            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': !changeIcon, 'fas fa-plus': changeIcon}"
+                                    ng-init="changeIcon = true" ng-click="changeIcon = !changeIcon"
+                                    class="fas fa-plus"></i></a>
         </h4>
-        <form class="institution-form" ng-show="changeIcon">
+        <form class="institution-form" ng-show="changeIcon" name="formOng">
             <div class="row">
-                <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                    <input type="text" id="nomeONG" name="nomeONG" class="form-control"
-                           placeholder="Nome da Instituição">
-                </label>
-                <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                    <textarea id="sobreONG" name="sobreONG" class="form-control"
-                              placeholder="Descreva aqui a missão e as principais atividades desenvolvidas pela instituição"></textarea>
-                </label>
-                <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                    <input id="CNPJONG" name="CNPJONG" class="form-control" placeholder="CNPJ">
-                </label>
+                <div class="form-group col-sm-6 col-lg-6 col-xl-6 col-md-6">
+                    <input type="text" id="ongName" class="form-control" ng-model="ongCtrl.ongName"
+                           ng-class="{'invalid': formOng.ongName.$invalid && formOng.ongName.$touched}"
+                           name="ongName" required>
+                    <label class="form-control-placeholder" for="ongName">ONG</label>
+                </div>
+                <div class="form-group col-sm-6 col-lg-6 col-xl-6 col-md-6">
+                    <input type="text" id="cnpjOng" class="form-control" ng-model="ongCtrl.cnpjOng"
+                           ng-class="{'invalid': formOng.cnpjOng.$invalid && formOng.cnpjOng.$touched}"
+                           name="cnpjOng" required>
+                    <label class="form-control-placeholder" for="cnpjOng">CNPJ</label>
+                </div>
+                <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                    <textarea type="text" id="aboutOng" class="form-control" ng-model="ongCtrl.aboutOng"
+                              name="aboutOng"></textarea>
+                    <label class="form-control-placeholder" for="aboutOng">Descrição brévia das instituição</label>
+                </div>
+
                 <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">Localização:</label>
                 <label class="radio-inline col-sm-2 col-lg-2 col-xl-2 col-md-2"><input type="radio" name="optradio"
                                                                                        checked> Indefinido
@@ -90,7 +99,8 @@
         <td>99.999.999/9999-99</td>
         <td>Joinville/SC</td>
         <td class="icons">
-            <a class="btn btn-sm button-edit " ng-click="specialityCtrl.openModal('lg');" ><i class="fas fa-pencil-alt"></i></a>
+            <a class="btn btn-sm button-edit " ng-click="specialityCtrl.openModal('lg');"><i
+                    class="fas fa-pencil-alt"></i></a>
             <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
         </td>
     </tr>
