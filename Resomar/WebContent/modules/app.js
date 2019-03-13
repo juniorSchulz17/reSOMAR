@@ -49,14 +49,14 @@ angular.module('app').config(
             controllerAs : 'specialistCtrl'
 
         }).when('/necessidade', {
-            templateUrl: 'View/needs/needs.html'
-            // controller : 'homeController',
-            // controllerAs : 'homeCtrl'
+            templateUrl: 'View/needs/needs.html',
+            controller : 'needsController',
+            controllerAs : 'needsCtrl'
 
         }).when('/paciente', {
-            templateUrl: 'View/patient/patient.html'
-            // controller : 'homeController',
-            // controllerAs : 'homeCtrl'
+            templateUrl: 'View/patient/patient.html',
+            controller : 'patientController',
+            controllerAs : 'patientCtrl'
 
         }).otherwise({
             redirectTo: '/'

@@ -25,6 +25,12 @@
                         <label class="form-control-placeholder" for="lastName">Sobrenome</label>
                     </div>
                     <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                        <input type="telephone" id="telephone" class="form-control" ng-model="userCtrl.telephone"
+                               ng-class="{'invalid': formUserRegister.telephone.$invalid && formUserRegister.telephone.$touched}"
+                               name="telephone" required>
+                        <label class="form-control-placeholder" for="telephone">Telefone</label>
+                    </div>
+                    <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
                         <input type="email" id="email" class="form-control" ng-model="userCtrl.email"
                                ng-class="{'invalid': formUserRegister.email.$invalid && formUserRegister.email.$touched}"
                                name="email" required>
@@ -41,28 +47,6 @@
                                ng-class="{'invalid': formUserRegister.confirmPassword.$invalid && formUserRegister.confirmPassword.$touched}"
                                name="confirmPassword" required>
                         <label class="form-control-placeholder" for="confirmPassword">Confirmar Senha</label>
-                    </div>
-                    <div class="radio-set col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                        <!-- Material inline 1 -->
-                        <div class="form-check form-check-inline">
-                            <input type="radio" class="form-check-input" id="materialInline1"
-                                   name="inlineMaterialRadiosExample">
-                            <label class="form-check-label" for="materialInline1">Administrador</label>
-                        </div>
-
-                        <!-- Material inline 2 -->
-                        <div class="form-check form-check-inline">
-                            <input type="radio" class="form-check-input" id="materialInline2"
-                                   name="inlineMaterialRadiosExample">
-                            <label class="form-check-label" for="materialInline2">Médico</label>
-                        </div>
-
-                        <!-- Material inline 3 -->
-                        <div class="form-check form-check-inline">
-                            <input type="radio" class="form-check-input" id="materialInline3"
-                                   name="inlineMaterialRadiosExample">
-                            <label class="form-check-label" for="materialInline3">ONG</label>
-                        </div>
                     </div>
                 </form>
                     <div class="buttons col-md-12" style="text-align:right; margin-top: 10px">

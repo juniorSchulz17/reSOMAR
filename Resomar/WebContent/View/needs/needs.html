@@ -2,32 +2,37 @@
 <div class="needs-register">
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de Necessidades
-            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}" ng-init="showForm = true" ng-click="showForm = !showForm" class="fas fa-window-minimize"></i></a>
+            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}" ng-init="showForm = false" ng-click="showForm = !showForm" class="fas fa-plus"></i></a>
         </h4>
-        <form class="needs-form" ng-show="showForm">
+        <form name="formNeeds" class="needs-form" ng-show="showForm">
             <div class="row">
-                <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                    <select type="text" id="tipoNecessidade" name="tipoNecessidade" class="form-control">
-                        <option value="Tipo">Tipo de Necessidade</option>
+                <label class="form-group col-sm-6 col-lg-6 col-xl-6 col-md-6">
+                    <select name="type" class="form-control" ng-model="needsCtrl.newNeeds.type"
+                            ng-class="{'invalid': formNeeds.type.$invalid && formNeeds.type.$touched}">
+                        <option value="">Tipo de Necessidade</option>
                         <option value="Medica">Médica</option>
                         <option value="Adocao">Adoção</option>
                         <option value="Clinica">Clínica</option>
                     </select>
                 </label>
-                <label id="grauNecessidade" class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                    <select type="text" id="grauNecessidade" name="grauNecessidade" class="form-control">
-                        <option>Selecione o Grau da Necessidade</option>
-                        <option>Baixa</option>
-                        <option>Média</option>
-                        <option>Alta</option>
+                <label class="col-sm-6 col-lg-6 col-xl-6 col-md-6">
+                    <select name="degree" class="form-control" ng-class="{'invalid':formNeeds.degree.$invalid && formNeeds.degree.$touched}"
+                            ng-model="needsCtrl.newNeeds.degree">
+                        <option value="">Selecione o Grau da Necessidade</option>
+                        <option value="low">Baixa</option>
+                        <option value="medium">Média</option>
+                        <option value="high">Alta</option>
                     </select>
                 </label>
-                <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                    <textarea type="text" id="necessidade" name="necessidade" class="form-control" placeholder="Observações"></textarea>
-                </label>
+                <div class="form-group col-sm-6 col-lg-6 col-xl-6 col-md-6">
+                    <textarea type="text" id="observation" name="observation" class="form-control" ng-model="needsCtrl.newNeeds.observation"
+                              ng-class="{'invalid': formNeeds.observation.$invalid && formNeeds.observation.$touched}"
+                              name="observation"></textarea>
+                    <label class="form-control-placeholder" for="observation">Observações</label>
+                </div>
                 <div class="buttons col-md-12" style="text-align: right">
                     <button type="button" class="btn btn-cancel">Cancelar</button>
-                    <button type="button" class="btn btn-save">Cadastrar</button>
+                    <button type="button" class="btn btn-save" ng-click="needsCtrl.validateNeeds();">Cadastrar</button>
                 </div>
             </div>
         </form>
@@ -50,7 +55,7 @@
         <td>Baixa</td>
         <td>Exame de Sangue</td>
         <td class="icons">
-            <a class="btn btn-sm button-edit " ng-click="specialityCtrl.openModal('lg');" ><i class="fas fa-pencil-alt"></i></a>
+            <a class="btn btn-sm button-edit " ng-click="needsCtrl.openModal('lg');" ><i class="fas fa-pencil-alt"></i></a>
             <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
         </td>
     </tr>

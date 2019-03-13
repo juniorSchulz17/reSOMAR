@@ -2,33 +2,40 @@
 <div class="patient-register">
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de Paciente
-            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}" ng-init="showForm = true" ng-click="showForm = !showForm" class="fas fa-window-minimize"></i></a>
+            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}" ng-init="showForm = false" ng-click="showForm = !showForm" class="fas fa-plus"></i></a>
         </h4>
-        <form class="patient-form" ng-show="showForm">
+        <form class="patient-form" name="formPatientRegister" ng-show="showForm">
             <div class="row">
+                <div class="form-group col-md-6">
+                    <input type="text" id="identification" class="form-control" ng-model="patientCtrl.newPatient.identification"
+                           ng-class="{'invalid': formPatientRegister.identification.$invalid && formPatientRegister.identification.$touched}"
+                           focus="true" name="identification" required>
+                    <label class="form-control-placeholder" for="identification">Identificação</label>
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" id="age" class="form-control" ng-model="patientCtrl.newPatient.age"
+                           ng-class="{'invalid': formPatient.age.$invalid && formPatient.age.$touched}"
+                           name="age" required>
+                    <label class="form-control-placeholder" for="age">Idade</label>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" id="responsible" class="form-control" ng-model="patientCtrl.newPatient.responsible"
+                           ng-class="{'invalid': formPatient.responsible.$invalid && formPatient.responsible.$touched}"
+                           name="responsible" required>
+                    <label class="form-control-placeholder" for="responsible">Responsável</label>
+                </div>
                 <label class="col-md-6">
-                    <input class="form-control input Identificacão" type="text"
-                           placeholder="Identificacão" name="Identificacão">
-                </label>
-                <label class="col-md-1">
-                    <input class="form-control input" type="text" placeholder="Idade"
-                           id="Idade" name="Idade">
-                </label>
-                <label class="col-md-6">
-                    <input class="form-control input" type="text" placeholder="Responsável"
-                           id="Responsavel" name="Responsavel">
-                </label>
-                <label class="col-md-6">
-                    <select class="form-control">
+                    <select name="institution" class="form-control" ng-class="{'invalid':patientFormRegister.advice.$invalid && patientFormRegister.advice.$touched}"
+                            ng-model="patientCtrl.newPatient.institution" required>
                         <option value="">Instituicão Responsável</option>
                         <option value="ALERGIA E IMUNOLOGIA">EXEMPLO 1</option>
-                        <option value="ANESTESIOLOGIA ">EXEMPLO 2</option>
+                        <option value="ANESTESIOLOGIA">EXEMPLO 2</option>
                         <option value="CARDIOLOGIA">EXEMPLO 3</option>
                     </select>
                 </label>
                 <div class="buttons col-md-12" style="text-align:right;">
                     <input type="button" class="btn btn-cancel" value="Cancelar">
-                    <input type="button" class="btn btn-save" value="Cadastrar">
+                    <input type="button" class="btn btn-save" ng-click="patientCtrl.validatePatient();" value="Cadastrar">
                 </div>
             </div>
         </form>
@@ -51,7 +58,7 @@
         <td>José Pereira Costa</td>
         <td>Associação de Amigos Crianças do Lar Abdon Batista</td>
         <td class="icons">
-            <a class="btn btn-sm button-edit " ng-click="specialityCtrl.openModal('lg');" ><i class="fas fa-pencil-alt"></i></a>
+            <a class="btn btn-sm button-edit " ng-click="patientCtrl.openModal('lg');" ><i class="fas fa-pencil-alt"></i></a>
             <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
         </td>
     </tr>

@@ -12,6 +12,10 @@ function userController() {
             alert("Informe seu sobrenome");
             return false;
         }
+        if (!_self.telephone) {
+            alert("Informe seu telefone");
+            return false;
+        }
         if (!_self.email) {
             alert("Informe seu email");
             return false;
