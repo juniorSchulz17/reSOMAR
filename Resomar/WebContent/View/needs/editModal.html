@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="View/needs/editModal.css">
+<div class="modal-header">
+    <h4 class="title-header">Editar Necessidades</h4>
+</div>
+<div class="modal-body" id="modal-body">
+    <form class="needs-form-modal" name="formNeedsEdit">
+        <div class="row">
+            <label class="form-group col-sm-6   col-lg-6 col-xl-6 col-md-6">
+                <select type="text" id="type" name="type" class="form-control" ng-model="needsCtrl.editNeeds.type"
+                        ng-class="{'invalid': formNeeds.type.$invalid && formNeeds.type.$touched}">
+                    <option value="">Tipo de Necessidade</option>
+                    <option value="Medica">Médica</option>
+                    <option value="Adocao">Adoção</option>
+                    <option value="Clinica">Clínica</option>
+                </select>
+            </label>
+            <label id="degree" class="form-group col-sm-6 col-lg-6 col-xl-6 col-md-6">
+                <select type="text" id="degree" name="degree" class="form-control" ng-model="needsCtrl.editNeeds.degree"
+                        ng-class="{'invalid': formNeeds.degree.$invalid && formNeeds.degree.$touched}">
+                    <option value="">Selecione o Grau da Necessidade</option>
+                    <option value="low">Baixa</option>
+                    <option value="medium">Média</option>
+                    <option value="high">Alta</option>
+                </select>
+            </label>
+            <div class="form-group col-sm-6 col-lg-6 col-xl-6 col-md-6">
+                    <textarea type="text" id="observation" name="observation" class="form-control" ng-model="needsCtrl.editNeeds.observation"
+                              ng-class="{'invalid': formNeeds.observation.$invalid && formNeeds.observation.$touched}"
+                              name="observation"></textarea>
+                <label class="form-control-placeholder" for="observation">Observações</label>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn button-cancel" ng-click="needsCtrl.closeModal();" type="button">Cancelar</button>
+    <button class="btn button-save" ng-click="needsCtrl.validateNeedsEdit();" type="button">Salvar</button>
+</div>

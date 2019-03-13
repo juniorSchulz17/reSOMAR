@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="View/patient/editModal.css">
+<div class="modal-header">
+    <h4 class="title-header">Editar Paciente</h4>
+</div>
+<div class="modal-body" id="modal-body">
+    <form class="patient-form-modal" name="formPatientEdit">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <input type="text" id="identificationEdit" class="form-control" ng-model="patientCtrl.editPatient.identificationEdit"
+                       ng-class="{'invalid': formPatientEdit.identificationEdit.$invalid && formPatientEdit.identificationEdit.$touched}"
+                       focus="true" name="identificationEdit" required>
+                <label class="form-control-placeholder" for="identificationEdit">Identificação</label>
+            </div>
+            <div class="form-group col-md-2">
+                <input type="text" id="ageEdit" class="form-control" ng-model="patientCtrl.editPatient.ageEdit"
+                       ng-class="{'invalid': formPatient.ageEdit.$invalid && ageEdit.$touched}"
+                       name="ageEdit" required>
+                <label class="form-control-placeholder" for="ageEdit">Idade</label>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" id="responsibleEdit" class="form-control" ng-model="patientCtrl.editPatient.responsibleEdit"
+                       ng-class="{'invalid': formPatient.responsibleEdit.$invalid && formPatient.responsibleEdit.$touched}"
+                       name="responsibleEdit" required>
+                <label class="form-control-placeholder" for="responsibleEdit">Responsável</label>
+            </div>
+            <label class="col-md-6">
+                <select name="institutionEdit" class="form-control" ng-class="{'invalid':patientFormRegister.institutionEdit.$invalid && patientFormRegister.institutionEdit.$touched}"
+                        ng-model="patientCtrl.editPatient.institutionEdit" required>
+                    <option value="">Instituicão Responsável</option>
+                    <option value="ALERGIA E IMUNOLOGIA">EXEMPLO 1</option>
+                    <option value="ANESTESIOLOGIA">EXEMPLO 2</option>
+                    <option value="CARDIOLOGIA">EXEMPLO 3</option>
+                </select>
+            </label>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn button-cancel" ng-click="patientCtrl.closeModal();" type="button">Cancelar</button>
+    <button class="btn button-save" ng-click="patientCtrl.validatePatientEdit();" type="button">Salvar</button>
+</div>

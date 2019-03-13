@@ -130,3 +130,24 @@ a {
 a {
     color: inherit;
 }
+
+
+.form-group {
+    position: relative !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.form-control-placeholder {
+    position: absolute !important;
+    top: 0 !important;
+    padding: 7px 0 0 13px !important;
+    transition: all 200ms !important;
+    opacity: 0.5 !important;
+}
+
+.form-control:focus + .form-control-placeholder,
+.form-control:valid + .form-control-placeholder {
+    font-size: 100% !important;
+    transform: translate3d(0, -100%, 0) !important;
+    opacity: 1 !important;
+}

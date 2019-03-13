@@ -1,0 +1,17 @@
+div.modal-header.ng-scope {
+    background-color: #1E3B2F;
+}
+.title-header {
+    color: #85793C;
+}
+.button-cancel {
+    background-color: #1E3B2F;
+    color: white;
+}
+.button-save {
+    background-color: #85793C;
+    color: white;
+}
+.patient-form-modal {
+    padding: 10px !important;
+}
