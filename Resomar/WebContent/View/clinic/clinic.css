@@ -1,8 +1,7 @@
 .clinic-register {
     float: right;
-    margin-top: 30px;
-    width: 76.2%;
-    margin-right: 3.5%;
+    margin-right: 2%;
+    width: 99.7%;
 }
 
 .fa-window-minimize, .fa-plus {
@@ -17,95 +16,3 @@
     background-color: #1E3B2F;
     color: #85793C;
 }
-
-.buttons {
-    margin-top: 20px;
-}
-
-.btn-cancel {
-    background: #85793C;
-    color: white;
-}
-
-.btn-save {
-    background: #1E3B2F;
-    color: white;
-}
-
-.btn-cancel:hover {
-    background: #695f2f;
-}
-
-.btn-save:hover {
-    background: #162b22;
-}
-
-.fa-window-minimize {
-    float: right;
-    color: #bdbdbd;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 2px;
-}
-.fa-plus {
-    float: right;
-    color: #bdbdbd;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 7px;
-}
-
-.fa-window-minimize:hover {
-    float: right;
-    color: #a1a1a1;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 0 auto;
-    margin-top: 2px;
-}
-
-.fa-plus:hover {
-    float: right;
-    color: #a1a1a1;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 0 auto;
-    margin-top: 7px;
-}
-
-a {
-    color: inherit;
-}
-
-.table-striped {
-    width: 76%;
-    margin-right: 55px;
-    float: right;
-    margin-top: 20px;
-}
-
-.fa-pencil-alt {
-    font-size: 13px;
-    color: white;
-}
-
-.fa-trash-alt {
-    font-size: 13px;
-    color: white;
-}
-
-.icons {
-    float: right;
-}
-
-.button-edit {
-    background: #85793c;
-}
-
-.button-trash {
-    background: #1E3B2F;
-}
-.invalid {
-    border-color: red;
-}
-

@@ -6,56 +6,55 @@
         </h4>
         <form name="donate-form" class="donate-form" ng-show="showForm">
             <div class="row">
-                <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                <div class="col-sm-3 col-lg-3 col-xl-3 col-md-3">
                     <select ng-model="donate.type" type="text" id="donateType" name="tipoDoacao" class="form-control" >
-                        <option value="Selecione">Selecione o tipo de doação</option>
+                        <option value="">Selecione o tipo de doação</option>
                         <option value="Consultas">Consultas</option>
                         <option value="Exames">Exames</option>
                         <option value="Doacoes">Doações</option>
                     </select>
-                </label>
+                </div>
 
-                <label ng-class="{'hide': donate.type !== 'Consultas'}" id="quantidadeConsultas" class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                <label ng-class="{'hide': donate.type !== 'Consultas'}" id="quantidadeConsultas" class="col-sm-1 col-lg-1 col-xl-1 col-md-1">
                     <input  name="quantidadeConsultas" class="form-control"
-                    placeholder="Qtd. Consultas">
+                    placeholder="Qtd">
                 </label>
-                <label ng-class="{'hide': donate.type !== 'Consultas'}" id="clinicaConsultas" class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                <label ng-class="{'hide': donate.type !== 'Consultas'}" id="clinicaConsultas" class="col-sm-4 col-lg-4 col-xl-4 col-md-4">
                     <select  name="clinicaConsultas" class="form-control">
                         <option>Selecione a clínica responsável</option>
                         <option value="Clínica">Clínica Fantasia</option>
                     </select>
                 </label>
 
-                <label ng-class="{'hide': donate.type !== 'Exames'}"  id="quantidadeExames" class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                <label ng-class="{'hide': donate.type !== 'Exames'}"  id="quantidadeExames" class="col-sm-2 col-lg-2 col-xl-2 col-md-2">
                     <input name="quantidadeExames" class="form-control" placeholder="Qtd. Exames">
                 </label>
-                <label ng-class="{'hide': donate.type !== 'Exames'}"  id="complexidadeExame" class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                <label ng-class="{'hide': donate.type !== 'Exames'}"  id="complexidadeExame" class="col-sm-2 col-lg-2 col-xl-2 col-md-2">
                     <select name="complexidadeExame" class="form-control">
-                        <option>Informe a complexidade</option>
+                        <option>Complexidade</option>
                         <option>Baixa</option>
                         <option>Média</option>
                         <option>Alta</option>
                     </select>
                 </label>
-                <label ng-class="{'hide': donate.type !== 'Exames'}" id="clinicaExames" class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                <label ng-class="{'hide': donate.type !== 'Exames'}" id="clinicaExames" class="col-sm-4 col-lg-4 col-xl-4 col-md-4">
                     <select  name="clinicaExames" class="form-control">
                         <option>Selecione a clínica responsável</option>
                         <option>Clínica Fantasia</option>
                     </select>
                 </label>
 
-                <label ng-class="{'hide': donate.type !== 'Doacoes'}" id="quantidadeAdocoes" class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                <label ng-class="{'hide': donate.type !== 'Doacoes'}" id="quantidadeAdocoes" class="col-sm-2 col-lg-2 col-xl-2 col-md-2">
                     <input  name="quantidadeAdocoes" class="form-control"
                            placeholder="Qtd. Adoções">
                 </label>
-                <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                <label class="col-sm-4 col-lg-4 col-xl-4 col-md-4">
                     <select ng-class="{'hide': donate.type !== 'Doacoes'}" name="clinicaAdocao" class="form-control">
                         <option>Selecione a clínica responsável</option>
                         <option>Clínica Fantasia</option>
                     </select>
                 </label>
-                <div class="buttons col-md-12" style="text-align: right">
-                    <button type="button" class="btn btn-cancel">Cancelar</button>
+                <div class="buttons col-md-12">
                     <button type="button" class="btn btn-save">Cadastrar</button>
                 </div>
             </div>

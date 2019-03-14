@@ -1,14 +1,8 @@
-.medic-register {
+.specialist-register {
     float: right;
     margin-right: 3.5%;
     margin-right: 2%;
     width: 99.7%;
-}
-
-.fast-acess {
-    margin-left: 22%;
-    margin-top: 2%;
-    margin-right: 1.5%;
 }
 
 .specialist-add {
@@ -20,86 +14,6 @@
     color: #85793C;
 }
 
-.buttons {
-    margin-top: 20px;
-}
-
-.btn-cancel {
-    background: #1E3B2F;
-    color: white;
-}
-
-.btn-save {
-    background: #85793C;
-    color: white;
-}
-.fa-window-minimize {
-    float: right;
-    color: #bdbdbd;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 2px;
-}
-
-.fa-window-minimize:hover {
-    float: right;
-    color: #a1a1a1;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 0 auto;
-    margin-top: 2px;
-}
-.fa-plus {
-    float: right;
-    color: #bdbdbd;
-    text-decoration: none;
-    font-size: 17px;
-    margin-top: 5px;
-}
-
-.fa-plus:hover {
-    float: right;
-    color: #a1a1a1;
-    text-decoration: none;
-    font-size: 17px;
-    margin-top: 5px;
-}
-.table-striped {
-    width: 76%;
-    margin-right: 55px;
-    float: right;
-    margin-top: 20px;
-}
-
-.fa-pencil-alt {
-    font-size: 13px;
-    color: white;
-}
-
-.fa-trash-alt {
-    font-size: 13px;
-    color: white;
-}
-
-.icons {
-    float: right;
-}
-.button-edit {
-    background: #85793c;
-}
-
-.button-trash {
-    background: #1E3B2F;
-}
-.invalid {
-    border-color: red;
-}
-.buttons {
-    text-align: right;
-}
-a {
-    color: inherit;
-}
 .inputs {
     margin-top: 5px;
 }

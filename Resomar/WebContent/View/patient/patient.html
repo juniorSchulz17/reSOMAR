@@ -9,16 +9,16 @@
                 <div class="form-group col-md-6">
                     <input type="text" id="identification" class="form-control" ng-model="patientCtrl.newPatient.identification"
                            ng-class="{'invalid': formPatientRegister.identification.$invalid && formPatientRegister.identification.$touched}"
-                           focus="true" name="identification" required>
+                            name="identification" required>
                     <label class="form-control-placeholder" for="identification">Identificação</label>
                 </div>
-                <div class="form-group col-md-2">
+                <div class="form-group col-md-1">
                     <input type="text" id="age" class="form-control" ng-model="patientCtrl.newPatient.age"
                            ng-class="{'invalid': formPatient.age.$invalid && formPatient.age.$touched}"
                            name="age" required>
                     <label class="form-control-placeholder" for="age">Idade</label>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-5">
                     <input type="text" id="responsible" class="form-control" ng-model="patientCtrl.newPatient.responsible"
                            ng-class="{'invalid': formPatient.responsible.$invalid && formPatient.responsible.$touched}"
                            name="responsible" required>
@@ -34,7 +34,6 @@
                     </select>
                 </label>
                 <div class="buttons col-md-12" style="text-align:right;">
-                    <input type="button" class="btn btn-cancel" value="Cancelar">
                     <input type="button" class="btn btn-save" ng-click="patientCtrl.validatePatient();" value="Cadastrar">
                 </div>
             </div>

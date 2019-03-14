@@ -24,14 +24,13 @@
                         <option value="high">Alta</option>
                     </select>
                 </label>
-                <div class="form-group col-sm-6 col-lg-6 col-xl-6 col-md-6">
+                <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
                     <textarea type="text" id="observation" name="observation" class="form-control" ng-model="needsCtrl.newNeeds.observation"
                               ng-class="{'invalid': formNeeds.observation.$invalid && formNeeds.observation.$touched}"
                               name="observation" required="false"></textarea>
                     <label class="form-control-placeholder" for="observation">Observações</label>
                 </div>
                 <div class="buttons col-md-12" style="text-align: right">
-                    <button type="button" class="btn btn-cancel">Cancelar</button>
                     <button type="button" class="btn btn-save" ng-click="needsCtrl.validateNeeds();">Cadastrar</button>
                 </div>
             </div>

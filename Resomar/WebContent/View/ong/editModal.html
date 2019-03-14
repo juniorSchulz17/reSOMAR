@@ -3,67 +3,41 @@
     <h4 class="title-header">Editar ONG</h4>
 </div>
 <div class="modal-body" id="modal-body">
-    <form class="institution-form" name="formOng">
+    <form class="ong-form-edit" name="formOng">
         <div class="row">
-            <div class="form-group col-sm-6 col-lg-6 col-xl-6 col-md-6">
-                <input type="text" id="ongName" class="form-control" ng-model="ongCtrl.editOng.ongName"
+            <div class="form-group col-sm-4 col-lg-4 col-xl-4 col-md-4">
+                <input type="text" id="ongName" class="form-control" ng-model="ongCtrl.newOng.ongName"
                        ng-class="{'invalid': formOng.ongName.$invalid && formOng.ongName.$touched}"
                        name="ongName" required>
                 <label class="form-control-placeholder" for="ongName">ONG</label>
             </div>
-            <div class="form-group col-sm-6 col-lg-6 col-xl-6 col-md-6">
-                <input type="text" id="cnpjOng" class="form-control" ng-model="ongCtrl.editOng.cnpjOng"
+            <div class="form-group col-sm-3 col-lg-3 col-xl-3 col-md-3">
+                <input type="text" id="cnpjOng" class="form-control" ng-model="ongCtrl.newOng.cnpjOng"
                        ng-class="{'invalid': formOng.cnpjOng.$invalid && formOng.cnpjOng.$touched}"
                        name="cnpjOng" required>
                 <label class="form-control-placeholder" for="cnpjOng">CNPJ</label>
             </div>
-            <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                    <textarea type="text" id="aboutOng" class="form-control" ng-model="ongCtrl.aboutOng"
-                              name="aboutOng" required="false"></textarea>
-                <label class="form-control-placeholder" for="aboutOng">Descrição brévia das instituição</label>
-            </div>
 
-            <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+            <label class="col-sm-2 col-lg-2 col-x2-1 col-md-2">
                 <select id="estadoONG" name="estadoONG" class="form-control">
-                    <option>Estado</option>
+                    <option>UF</option>
                     <option>SC</option>
                     <option>PR</option>
                 </select>
             </label>
-            <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">
+            <label class="col-sm-3 col-lg-3 col-xl-3 col-md-3">
                 <select id="cidadeONG" name="cidadeONG" class="form-control">
                     <option>Cidade</option>
                     <option>Joinville</option>
                     <option>Blumenau</option>
                 </select>
             </label>
-            <label class="col-sm-12 col-lg-12 col-xl-12 col-md-12">Categorias:</label>
-            <label class="checkbox-inline col-sm-4 col-lg-4 col-xl-4 col-md-4"><input type="checkbox" value="">
-                Cidadania e Defesa de Direitos</label>
-            <label class="checkbox-inline col-sm-4 col-lg-4 col-xl-4 col-md-4"><input type="checkbox" value="">
-                Esporte e Lazer</label>
-            <label class="checkbox-inline col-sm-4 col-lg-4 col-xl-4 col-md-4"><input type="checkbox" value="">
-                Infância</label>
-            <label class="checkbox-inline col-sm-4 col-lg-4 col-xl-4 col-md-4"><input type="checkbox" value="">
-                Saúde e Nutrição</label>
-            <label class="checkbox-inline col-sm-4 col-lg-4 col-xl-4 col-md-4"><input type="checkbox" value="">
-                Mobilidade e Intervenção Urbana</label>
-            <label class="checkbox-inline col-sm-4 col-lg-4 col-xl-4 col-md-4"><input type="checkbox" value="">
-                Trabalho com a Comunidade</label>
-            <label class="checkbox-inline col-sm-4 col-lg-4 col-xl-4 col-md-4"><input type="checkbox" value="">
-                Comunicação e Tecnologia</label>
-            <label class="checkbox-inline col-sm-4 col-lg-4 col-xl-4 col-md-4"><input type="checkbox" value="">
-                Terceira Idade</label>
-            <label class="checkbox-inline col-sm-4 col-lg-4 col-xl-4 col-md-4"><input type="checkbox" value="">
-                Proteção aos Animais</label>
-            <label class="checkbox-inline col-sm-4 col-lg-4 col-xl-4 col-md-4"><input type="checkbox" value="">
-                Educação, Arte e Cultura</label>
-            <label class="checkbox-inline col-sm-4 col-lg-4 col-xl-4 col-md-4"><input type="checkbox" value=""> Meio
-                Ambiente</label>
-            <label class="checkbox-inline col-sm-4 col-lg-4 col-xl-4 col-md-4"><input type="checkbox" value="">
-                Juventude</label>
-            <label class="checkbox-inline col-sm-4 col-lg-4 col-xl-4 col-md-4"><input type="checkbox" value="">
-                Mobilização Interna</label>
+            <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
+                     <textarea type="text" id="description" name="description" class="form-control"
+                               ng-model="ongCtrl.newOng.description"
+                               name="description" required="false"></textarea>
+                <label class="form-control-placeholder" for="description">Descrição brévia da instituição</label>
+            </div>
         </div>
     </form>
 </div>

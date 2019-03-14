@@ -15,7 +15,7 @@
                     <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
                         <input type="text" id="name" class="form-control" ng-model="userCtrl.name"
                                ng-class="{'invalid': formUserRegister.name.$invalid && formUserRegister.name.$touched}"
-                               focus="true" name="name" required>
+                               name="name" required>
                         <label class="form-control-placeholder" for="name">Nome</label>
                     </div>
                     <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
@@ -43,16 +43,17 @@
                         <label class="form-control-placeholder" for="password">Senha</label>
                     </div>
                     <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                        <input type="password" id="confirmPassword" class="form-control" ng-model="userCtrl.confirmPassword"
+                        <input type="password" id="confirmPassword" class="form-control"
+                               ng-model="userCtrl.confirmPassword"
                                ng-class="{'invalid': formUserRegister.confirmPassword.$invalid && formUserRegister.confirmPassword.$touched}"
                                name="confirmPassword" required>
                         <label class="form-control-placeholder" for="confirmPassword">Confirmar Senha</label>
                     </div>
                 </form>
-                    <div class="buttons col-md-12" style="text-align:right; margin-top: 10px">
-                        <input type="button" class="btn btn-cancel" value="Cancelar">
-                        <input type="button" class="btn btn-save" ng-click="userCtrl.validateRegister();" value="Cadastrar">
-                    </div>
+                <div class="buttons col-md-12" style="text-align:right; margin-top: 10px">
+                    <input type="button" class="btn btn-cancel" value="Cancelar">
+                    <input type="button" class="btn btn-save" ng-click="userCtrl.validateRegister();" value="Cadastrar">
+                </div>
 
             </div>
             <div class="col-md-8 banner-sec">
