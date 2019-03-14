@@ -170,3 +170,7 @@ body {
 .button-trash {
 	background: #1E3B2F;
 }
+
+.form-control {
+	display: -webkit-inline-box;
+}
