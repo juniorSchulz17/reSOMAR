@@ -29,7 +29,7 @@
     <script type="text/javascript" src="modules/menu/menu.controller.js"></script>
     <script type="text/javascript" src="modules/home/home.controller.js"></script>
     <script type="text/javascript" src="modules/login/login.controller.js"></script>
-    <script type="text/javascript" src="modules/user/user.controller.js"></script>
+    <script type="text/javascript" src="modules/guest/guest.controller.js"></script>
     <script type="text/javascript" src="modules/patient/patient.controller.js"></script>
     <script type="text/javascript" src="modules/speciality/speciality.controller.js"></script>
     <script type="text/javascript" src="modules/specialist/specialist.controller.js"></script>
@@ -38,7 +38,7 @@
 
 </head>
 <body>
-<ng-include ng-if="activeTab !== '/entrar' && activeTab !== '/usuario'" src="'templates/menu/menu.html'"></ng-include>
+<ng-include ng-if="activeTab !== '/entrar' && activeTab !== '/convidado'" src="'templates/menu/menu.html'"></ng-include>
 <div ng-view></div>
 </body>
 </html>

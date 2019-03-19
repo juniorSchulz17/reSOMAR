@@ -113,28 +113,6 @@ body {
     bottom: 272px;
 }
 
-.btn-cancel {
-    background: #85793C;
-    color: white;
-}
-
-.btn-save {
-    background: #1E3B2F;
-    color: white;
-}
-
-.btn-cancel:hover {
-    background: #695f2f;
-}
-
-.btn-save:hover {
-    background: #162b22;
-}
-
-.radio-set {
-    margin-left: 2px !important;
-}
-
 .form-group {
     position: relative !important;
     margin-bottom: 1.5rem !important;

@@ -13,10 +13,10 @@ angular.module('app').config(
             controller: 'loginController',
             controllerAs: 'loginCtrl'
 
-        }).when('/usuario', {
-            templateUrl: 'View/user/user.html',
-            controller: 'userController',
-            controllerAs: 'userCtrl'
+        }).when('/convidado', {
+            templateUrl: 'View/guest/guest.html',
+            controller: 'guestController',
+            controllerAs: 'guestCtrl'
 
         }).when('/principal	', {
             templateUrl: 'View/home/home.html'

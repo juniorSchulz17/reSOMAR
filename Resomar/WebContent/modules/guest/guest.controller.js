@@ -1,6 +1,6 @@
-angular.module('app').controller('userController', userController);
+angular.module('app').controller('guestController', guestController);
 
-function userController() {
+function guestController() {
     const _self = this;
 
     _self.validateRegister = () => {
@@ -30,10 +30,6 @@ function userController() {
         }
         if (_self.confirmPassword != _self.password ) {
             alert("As senhas informadas não correspondem");
-            return false;
-        }
-        if (!_self.inlineMaterialRadiosExample) {
-            alert("Informe o tipo de acesso");
             return false;
         }
     }

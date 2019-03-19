@@ -2,57 +2,56 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="View/user/user.css"/>
+    <title>Convidado</title>
+    <link rel="stylesheet" href="View/guest/guest.css"/>
 </head>
 <body>
 <div class="login-block">
     <div class="container">
         <div class="row">
             <div class="col-md-4 login-sec">
-                <h2 class="text-center">Cadastro de Usuário</h2>
+                <h2 class="text-center">Cadastro de Convidado</h2>
                 <form id="user-form" class="user-form" name="formUserRegister">
                     <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                        <input type="text" id="name" class="form-control" ng-model="userCtrl.name"
+                        <input type="text" id="name" class="form-control" ng-model="guestCtrl.name"
                                ng-class="{'invalid': formUserRegister.name.$invalid && formUserRegister.name.$touched}"
                                name="name" required>
                         <label class="form-control-placeholder" for="name">Nome</label>
                     </div>
                     <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                        <input type="text" id="lastName" class="form-control" ng-model="userCtrl.lastName"
+                        <input type="text" id="lastName" class="form-control" ng-model="guestCtrl.lastName"
                                ng-class="{'invalid': formUserRegister.lastName.$invalid && formUserRegister.lastName.$touched}"
                                name="lastName" required>
                         <label class="form-control-placeholder" for="lastName">Sobrenome</label>
                     </div>
                     <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                        <input type="telephone" id="telephone" class="form-control" ng-model="userCtrl.telephone"
+                        <input type="telephone" id="telephone" class="form-control" ng-model="guestCtrl.telephone"
                                ng-class="{'invalid': formUserRegister.telephone.$invalid && formUserRegister.telephone.$touched}"
                                name="telephone" required>
                         <label class="form-control-placeholder" for="telephone">Telefone</label>
                     </div>
                     <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                        <input type="email" id="email" class="form-control" ng-model="userCtrl.email"
+                        <input type="email" id="email" class="form-control" ng-model="guestCtrl.email"
                                ng-class="{'invalid': formUserRegister.email.$invalid && formUserRegister.email.$touched}"
                                name="email" required>
                         <label class="form-control-placeholder" for="email">Email</label>
                     </div>
                     <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
-                        <input type="password" id="password" class="form-control" ng-model="userCtrl.password"
+                        <input type="password" id="password" class="form-control" ng-model="guestCtrl.password"
                                ng-class="{'invalid': formUserRegister.password.$invalid && formUserRegister.password.$touched}"
                                name="password" required>
                         <label class="form-control-placeholder" for="password">Senha</label>
                     </div>
                     <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
                         <input type="password" id="confirmPassword" class="form-control"
-                               ng-model="userCtrl.confirmPassword"
+                               ng-model="guestCtrl.confirmPassword"
                                ng-class="{'invalid': formUserRegister.confirmPassword.$invalid && formUserRegister.confirmPassword.$touched}"
                                name="confirmPassword" required>
                         <label class="form-control-placeholder" for="confirmPassword">Confirmar Senha</label>
                     </div>
                 </form>
                 <div class="buttons col-md-12" style="text-align:right; margin-top: 10px">
-                    <input type="button" class="btn btn-cancel" value="Cancelar">
-                    <input type="button" class="btn btn-save" ng-click="userCtrl.validateRegister();" value="Cadastrar">
+                    <input type="button" class="btn btn-save" ng-click="guestCtrl.validateRegister();" value="Cadastrar">
                 </div>
 
             </div>
