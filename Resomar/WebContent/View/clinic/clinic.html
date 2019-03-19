@@ -1,55 +1,83 @@
-
 <link rel="stylesheet" href="View/clinic/clinic.css"/>
 <div class="clinic-register">
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de Clínica
         <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}" ng-init="showForm = true" ng-click="showForm = !showForm"></i></a>
         </h4>
-        <form class="clinic-form" ng-show="showForm">
+        <form class="clinic-form" name="formClinicRegister" ng-show="showForm">
             <div class="row">
-                <label class="col-md-8">
-                    <input class="form-control input nomeClinica" type="text"
-                           placeholder="Nome da Clínica" name="nomeClinica">
-                </label>
-                <label class="col-md-2">
-                    <input class="form-control input" type="text" placeholder="Telefone"
-                           id="telefone" name="telefone">
-                </label>
-                <label class="col-md-2">
-                    <input class="form-control input" type="text" placeholder="CNPJ"
-                           id="CNPJ" name="CNPJ">
-                </label>
-                <label class="col-md-2">
-                    <input class="form-control input" type="text" placeholder="CEP"
-                           id="CEP" name="CEP">
-                </label>
-                <label class="col-md-5">
-                    <input class="form-control input" type="text" placeholder="Endereco"
-                           id="Endereco" name="Endereco">
-                </label>
-                <label class="col-md-1">
-                    <input class="form-control input" type="text" placeholder="Nº"
-                           id="numero" name="Numero">
-                </label>
-                <label class="col-md-4">
-                    <input class="form-control input" type="text" placeholder="Bairro"
-                           id="Bairro" name="Bairro">
-                </label>
-                <label class="col-md-3">
-                    <input class="form-control input" type="text" placeholder="Cidade"
-                           id="Cidade" name="Cidade  ">
-                </label>
-                <label class="col-md-1">
-                    <input class="form-control input" type="text" placeholder="UF"
-                           id="Estado" name="Estado">
-                </label>
-                <label class="col-md-3">
-                    <input class="form-control input" type="text" placeholder="Complemento"
-                           id="Complemento" name="Complemento">
-                </label>
+                <div class="form-group col-md-6">
+                    <input class="form-control" type="text"
+                           ng-model="clinicCtrl.newClinic.name"
+                           ng-class="{'invalid': formClinicRegister.name.$invalid && formClinicRegister.name.$touched}"
+                           id="name" name="name" required>
+                    <label class="form-control-placeholder" for="name">Nome da Clínica</label>
+                </div>
+                <div class="form-group col-md-3">
+                    <input class="form-control" type="text"
+                           ng-model="clinicCtrl.newClinic.tel"
+                           ng-class="{'invalid': formClinicRegister.tel.$invalid && formClinicRegister.tel.$touched}"
+                           id="tel" name="tel" required>
+                    <label class="form-control-placeholder" for="name">Telefone</label>
+                </div>
+                <div class="form-group col-md-3">
+                    <input class="form-control" type="text"
+                           ng-model="clinicCtrl.newClinic.cnpj"
+                           ng-class="{'invalid': formClinicRegister.cnpj.$invalid && formClinicRegister.cnpj.$touched}"
+                           id="cnpj" name="cnpj" required>
+                    <label class="form-control-placeholder" for="cnpj">CNPJ</label>
+                </div>
+                <div class="form-group col-md-2">
+                    <input class="form-control" type="text"
+                           ng-model="clinicCtrl.newClinic.zipCode"
+                           ng-class="{'invalid': formClinicRegister.zipCode.$invalid && formClinicRegister.zipCode.$touched}"
+                           id="zipCode" name="zipCode" required>
+                    <label class="form-control-placeholder" for="zipCode">CEP</label>
+                </div>
+                <div class="form-group col-md-6">
+                    <input class="form-control" type="text"
+                           ng-model="clinicCtrl.newClinic.address"
+                           ng-class="{'invalid': formClinicRegister.address.$invalid && formClinicRegister.address.$touched}"
+                           id="address" name="address" required>
+                    <label class="form-control-placeholder" for="address">Endereço</label>
+                </div>
+                <div class="form-group col-md-1">
+                    <input class="form-control" type="text"
+                           ng-model="clinicCtrl.newClinic.number"
+                           ng-class="{'invalid': formClinicRegister.number.$invalid && formClinicRegister.number.$touched}"
+                           id="number" name="number" required>
+                    <label class="form-control-placeholder" for="number">Nº</label>
+                </div>
+                <div class="form-group col-md-3">
+                    <input class="form-control" type="text"
+                           ng-model="clinicCtrl.newClinic.district"
+                           ng-class="{'invalid': formClinicRegister.district.$invalid && formClinicRegister.district.$touched}"
+                           id="district" name="district" required>
+                    <label class="form-control-placeholder" for="district">Bairro</label>
+                </div>
+                <div class="form-group col-md-1">
+                    <input class="form-control" type="text"
+                           ng-model="clinicCtrl.newClinic.state"
+                           ng-class="{'invalid': formClinicRegister.state.$invalid && formClinicRegister.state.$touched}"
+                           id="state" name="state" required>
+                    <label class="form-control-placeholder" for="state">Estado</label>
+                </div>
+                <div class="form-group col-md-3">
+                    <input class="form-control" type="text"
+                           ng-model="clinicCtrl.newClinic.city"
+                           ng-class="{'invalid': formClinicRegister.city.$invalid && formClinicRegister.city.$touched}"
+                           id="city" name="city" required>
+                    <label class="form-control-placeholder" for="city">Cidade</label>
+                </div>
+                <div class="form-group col-md-4">
+                    <input class="form-control" type="text"
+                           ng-model="clinicCtrl.newClinic.complement"
+                           ng-class="{'invalid': formClinicRegister.complement.$invalid && formClinicRegister.complement.$touched}"
+                           id="complement" name="complement" required>
+                    <label class="form-control-placeholder" for="complement">Complemento</label>
+                </div>
                 <div class="buttons col-md-12" style="text-align:right;">
-                    <input type="button" class="btn btn-cancel" value="Cancelar">
-                    <input type="button" class="btn btn-save" value="Cadastrar">
+                    <input type="button" class="btn btn-save" value="Cadastrar" ng-click="clinicCtrl.validateClinic();">
                 </div>
             </div>
         </form>
@@ -72,7 +100,7 @@
         <td>(47) 99655-8632</td>
         <td>Joinville</td>
         <td class="icons">
-            <a class="btn btn-sm button-edit " ng-click="specialityCtrl.openModal('lg');" ><i class="fas fa-pencil-alt"></i></a>
+            <a class="btn btn-sm button-edit " ng-click="clinicCtrl.openModal('lg');" ><i class="fas fa-pencil-alt"></i></a>
             <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
         </td>
     </tr>

@@ -2,60 +2,58 @@
 <div class="donate-register">
     <div class="card fast-acess bg-light">
         <h4 class="card-header">Cadastro de Doações
-            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}" ng-init="showForm = true" ng-click="showForm = !showForm" class="fas fa-window-minimize"></i></a>
+            <a title="Minimizar"><i ng-class="{'fas fa-window-minimize': showForm, 'fas fa-plus': !showForm}" ng-init="showForm = false" ng-click="showForm = !showForm" class="fas fa-plus"></i></a>
         </h4>
         <form name="donate-form" class="donate-form" ng-show="showForm">
             <div class="row">
                 <div class="col-sm-3 col-lg-3 col-xl-3 col-md-3">
-                    <select ng-model="donate.type" type="text" id="donateType" name="tipoDoacao" class="form-control" >
+                    <select ng-model="donateCtrl.newDonate.donateType" type="text" id="donateType" name="donateType" class="form-control">
                         <option value="">Selecione o tipo de doação</option>
-                        <option value="Consultas">Consultas</option>
-                        <option value="Exames">Exames</option>
-                        <option value="Doacoes">Doações</option>
+                        <option value="consult">Consultas</option>
+                        <option value="exams">Exames</option>
+                        <option value="donate">Doações</option>
                     </select>
                 </div>
-
-                <label ng-class="{'hide': donate.type !== 'Consultas'}" id="quantidadeConsultas" class="col-sm-1 col-lg-1 col-xl-1 col-md-1">
-                    <input  name="quantidadeConsultas" class="form-control"
+                <label ng-class="{'hide': donateCtrl.newDonate.donateType !== 'consult'}" id="quantityConsult" class="col-sm-1 col-lg-1 col-xl-1 col-md-1">
+                    <input ng-model="donateCtrl.newDonate.quantityConsult" name="quantityConsult" class="form-control"
                     placeholder="Qtd">
                 </label>
-                <label ng-class="{'hide': donate.type !== 'Consultas'}" id="clinicaConsultas" class="col-sm-4 col-lg-4 col-xl-4 col-md-4">
-                    <select  name="clinicaConsultas" class="form-control">
-                        <option>Selecione a clínica responsável</option>
-                        <option value="Clínica">Clínica Fantasia</option>
+                <label ng-class="{'hide': donateCtrl.newDonate.donateType !== 'consult'}" id="clinicConsult" class="col-sm-4 col-lg-4 col-xl-4 col-md-4">
+                    <select ng-model="donateCtrl.newDonate.clinicConsult" name="clinicConsult" class="form-control">
+                        <option value="">Selecione a clínica responsável</option>
+                        <option value="clinic-one">Clínica Fantasia</option>
+                    </select>
+                </label>
+                <label ng-class="{'hide': donateCtrl.newDonate.donateType !== 'exams'}"  id="quantityExams" class="col-sm-1 col-lg-1 col-xl-1 col-md-1">
+                    <input ng-model="donateCtrl.newDonate.quantityExams" name="quantityExams" class="form-control" placeholder="Qtd">
+                </label>
+                <label ng-class="{'hide': donateCtrl.newDonate.donateType !== 'exams'}"  id="complexExams" class="col-sm-3 col-lg-3 col-xl-3 col-md-3">
+                    <select ng-model="donateCtrl.newDonate.complexExams" name="complexExams" class="form-control">
+                        <option value="">Complexidade</option>
+                        <option value="low">Baixa</option>
+                        <option value="medium">Média</option>
+                        <option value="high">Alta</option>
+                    </select>
+                </label>
+                <label ng-class="{'hide': donateCtrl.newDonate.donateType !== 'exams'}" class="col-sm-4 col-lg-4 col-xl-4 col-md-4">
+                    <select ng-model="donateCtrl.newDonate.clinicExams"  name="clinicExams"class="form-control">
+                        <option value="">Selecione a clínica responsável</option>
+                        <option value="clinic-one">Clínica Fantasia</option>
                     </select>
                 </label>
 
-                <label ng-class="{'hide': donate.type !== 'Exames'}"  id="quantidadeExames" class="col-sm-2 col-lg-2 col-xl-2 col-md-2">
-                    <input name="quantidadeExames" class="form-control" placeholder="Qtd. Exames">
+                <label ng-class="{'hide': donateCtrl.newDonate.donateType !== 'donate'}" id="quantityDonate" class="col-sm-1 col-lg-1 col-xl-1 col-md-1">
+                    <input ng-model="donateCtrl.newDonate.quantityDonate" name="quantityDonate" class="form-control"
+                           placeholder="Qtd">
                 </label>
-                <label ng-class="{'hide': donate.type !== 'Exames'}"  id="complexidadeExame" class="col-sm-2 col-lg-2 col-xl-2 col-md-2">
-                    <select name="complexidadeExame" class="form-control">
-                        <option>Complexidade</option>
-                        <option>Baixa</option>
-                        <option>Média</option>
-                        <option>Alta</option>
-                    </select>
-                </label>
-                <label ng-class="{'hide': donate.type !== 'Exames'}" id="clinicaExames" class="col-sm-4 col-lg-4 col-xl-4 col-md-4">
-                    <select  name="clinicaExames" class="form-control">
-                        <option>Selecione a clínica responsável</option>
-                        <option>Clínica Fantasia</option>
-                    </select>
-                </label>
-
-                <label ng-class="{'hide': donate.type !== 'Doacoes'}" id="quantidadeAdocoes" class="col-sm-2 col-lg-2 col-xl-2 col-md-2">
-                    <input  name="quantidadeAdocoes" class="form-control"
-                           placeholder="Qtd. Adoções">
-                </label>
-                <label class="col-sm-4 col-lg-4 col-xl-4 col-md-4">
-                    <select ng-class="{'hide': donate.type !== 'Doacoes'}" name="clinicaAdocao" class="form-control">
-                        <option>Selecione a clínica responsável</option>
-                        <option>Clínica Fantasia</option>
+                <label ng-class="{'hide': donateCtrl.newDonate.donateType !== 'donate'}" class="col-sm-4 col-lg-4 col-xl-4 col-md-4">
+                    <select ng-model="donateCtrl.newDonate.clinicDonate"  name="clinicDonate" class="form-control">
+                        <option value="">Selecione a clínica responsável</option>
+                        <option value="clinic-one">Clínica Fantasia</option>
                     </select>
                 </label>
                 <div class="buttons col-md-12">
-                    <button type="button" class="btn btn-save">Cadastrar</button>
+                    <button type="button" class="btn btn-save" ng-click="donateCtrl.validateDonate();">Cadastrar</button>
                 </div>
             </div>
         </form>
@@ -78,7 +76,7 @@
         <td>Clínica Volte a Sorrir</td>
         <td></td>
         <td class="icons">
-            <a class="btn btn-sm button-edit " ng-click="specialityCtrl.openModal('lg');" ><i class="fas fa-pencil-alt"></i></a>
+            <a class="btn btn-sm button-edit " ng-click="donateCtrl.openModal('lg');" ><i class="fas fa-pencil-alt"></i></a>
             <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
         </td>
     </tr>
@@ -88,7 +86,7 @@
         <td>Consultório Gimenez</td>
         <td>Baixa</td>
         <td class="icons">
-            <a class="btn btn-sm button-edit"><i class="fas fa-pencil-alt"></i></a>
+            <a class="btn btn-sm button-edit" ng-click="donateCtrl.openModal('lg');"><i class="fas fa-pencil-alt"></i></a>
             <a class="btn btn-sm button-trash"><i class="fas fa-trash-alt"></i></a>
         </td>
     </tr>

@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="View/donate/editModal.css">
+<div class="modal-header">
+    <h4 class="title-header">Editar Doações</h4>
+</div>
+<div class="modal-body" id="modal-body">
+    <form name="donate-form-modal" name="formDonateEdit">
+        <div class="row">
+            <div class="form-group col-sm-5 col-lg-5 col-xl-5 col-md-5">
+                <select ng-model="donateCtrl.editDonate.donateType" type="text" id="donateType" name="donateType" class="form-control"
+                        ng-class="{'invalid': formDonate.type.$invalid && formDonate.type.$touched}">
+                    <option value="">Selecione o tipo de doação</option>
+                    <option value="consult">Consultas</option>
+                    <option value="exams">Exames</option>
+                    <option value="donate">Doações</option>
+                </select>
+            </div>
+            <label ng-class="{'hide': donateCtrl.editDonate.donateType !== 'consult'}" id="quantityConsult" class="col-sm-2 col-lg-2 col-xl-2 col-md-2">
+                <input  ng-model="donateCtrl.editDonate.quantityConsult" name="quantityConsult" class="form-control"
+                        placeholder="Qtd">
+            </label>
+            <label ng-class="{'hide': donateCtrl.editDonate.donateType !== 'consult'}" id="clinicConsult" class="col-sm-5 col-lg-5 col-xl-5 col-md-5">
+                <select  ng-model="donateCtrl.editDonate.clinicConsult" name="clinicConsult" class="form-control">
+                    <option value="">Selecione a clínica responsável</option>
+                    <option value="clinic-one">Clínica Fantasia</option>
+                </select>
+            </label>
+
+            <label ng-class="{'hide': donateCtrl.editDonate.donateType !== 'exams'}"  id="quantityExams" class="col-sm-2 col-lg-2 col-xl-2 col-md-2">
+                <input ng-model="donateCtrl.editDonate.quantityExams" name="quantityExams" class="form-control" placeholder="Qtd">
+            </label>
+            <label ng-class="{'hide': donateCtrl.editDonate.donateType !== 'exams'}"  id="complexExams" class="col-sm-5 col-lg-5 col-xl-5 col-md-5">
+                <select ng-model="donateCtrl.editDonate.complexExams" name="complexExams" class="form-control">
+                    <option value="">Complexidade</option>
+                    <option value="low">Baixa</option>
+                    <option value="medium">Média</option>
+                    <option value="high">Alta</option>
+                </select>
+            </label>
+            <label ng-class="{'hide': donateCtrl.editDonate.donateType !== 'exams'}" id="clinicExams" class="col-sm-5 col-lg-5 col-xl-5 col-md-5">
+                <select ng-model="donateCtrl.editDonate.clinicExams" name="clinicExams" class="form-control">
+                    <option value="">Selecione a clínica responsável</option>
+                    <option value="clinic-one">Clínica Fantasia</option>
+                </select>
+            </label>
+
+            <label ng-class="{'hide': donateCtrl.editDonate.donateType !== 'donate'}" id="quantityDonate" class="col-sm-2 col-lg-2 col-xl-2 col-md-2">
+                <input ng-model="donateCtrl.editDonate.quantityDonate" name="quantityDonate" class="form-control"
+                        placeholder="Qtd">
+            </label>
+            <label class="col-sm-5 col-lg-5 col-xl-5 col-md-5">
+                <select ng-model="donateCtrl.editDonate.clinicDonate" ng-class="{'hide': donateCtrl.editDonate.donateType !== 'donate'}" id="clinicDonate" name="clinicDonate" class="form-control">
+                    <option value="">Selecione a clínica responsável</option>
+                    <option value="clinic-one">Clínica Fantasia</option>
+                </select>
+            </label>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn button-cancel" ng-click="donateCtrl.closeModal();" type="button">Cancelar</button>
+    <button class="btn button-save" ng-click="donateCtrl.validateDonateEdit();" type="button">Salvar</button>
+</div>

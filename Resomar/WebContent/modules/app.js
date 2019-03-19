@@ -24,14 +24,14 @@ angular.module('app').config(
             // controllerAs : 'homeCtrl'
 
         }).when('/clinica', {
-            templateUrl: 'View/clinic/clinic.html'
-            // controller : 'homeController',
-            // controllerAs : 'homeCtrl'
+            templateUrl: 'View/clinic/clinic.html',
+            controller : 'clinicController',
+            controllerAs : 'clinicCtrl'
 
         }).when('/doacao', {
-            templateUrl: 'View/donate/donate.html'
-            // controller : 'homeController',
-            // controllerAs : 'homeCtrl'
+            templateUrl: 'View/donate/donate.html',
+            controller : 'donateController',
+            controllerAs : 'donateCtrl'
 
         }).when('/especialidade', {
             templateUrl: 'View/speciality/speciality.html',

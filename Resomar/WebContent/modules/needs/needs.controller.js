@@ -10,15 +10,11 @@ angular.module("app").controller("needsController", function ($uibModal) {
             alert("Informe o tipo de necessidade");
             return false;
         }
-        if (!_self.newNeeds.degree) {
-            alert("Informe o grau de necessidade");
-            return false;
-        }
     }
 
     //validate input in modal
-    _self.validateNeedsEdit = () => {
-        if (!_self.editNeeds.type) {
+    _self.validateDonateEdit = () => {
+        if (!_self.editDonate.type) {
             alert("Informe o tipo de necessidade");
             return false;
         }
