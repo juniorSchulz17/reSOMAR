@@ -13,6 +13,14 @@ angular.module("app").controller("ongController", function ($uibModal) {
             alert("Informe o CNPJ");
             return false;
         }
+        if (!_self.newOng.CNPJ) {
+            alert("Informe o estado");
+            return false;
+        }
+        if (!_self.newOng.city) {
+            alert("Informe a cidade");
+            return false;
+        }
     }
 
     _self.validateOngEditForm = () => {
@@ -22,6 +30,14 @@ angular.module("app").controller("ongController", function ($uibModal) {
         }
         if (!_self.editOng.cnpjOng) {
             alert("Informe o CNPJ");
+            return false;
+        }
+        if (!_self.editOng.state) {
+            alert("Informe o estado");
+            return false;
+        }
+        if (!_self.editOng.city) {
+            alert("Informe a cidade");
             return false;
         }
     }

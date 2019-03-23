@@ -6,27 +6,27 @@
     <form class="ong-form-edit" name="formOng">
         <div class="row">
             <div class="form-group col-sm-4 col-lg-4 col-xl-4 col-md-4">
-                <input type="text" id="ongName" class="form-control" ng-model="ongCtrl.newOng.ongName"
+                <input type="text" id="ongName" class="form-control" ng-model="ongCtrl.editOng.ongName"
                        ng-class="{'invalid': formOng.ongName.$invalid && formOng.ongName.$touched}"
                        name="ongName" required>
                 <label class="form-control-placeholder" for="ongName">ONG</label>
             </div>
             <div class="form-group col-sm-3 col-lg-3 col-xl-3 col-md-3">
-                <input type="text" id="cnpjOng" class="form-control" ng-model="ongCtrl.newOng.cnpjOng"
+                <input type="text" id="cnpjOng" class="form-control" ng-model="ongCtrl.editOng.cnpjOng"
                        ng-class="{'invalid': formOng.cnpjOng.$invalid && formOng.cnpjOng.$touched}"
                        name="cnpjOng" required>
                 <label class="form-control-placeholder" for="cnpjOng">CNPJ</label>
             </div>
 
             <label class="col-sm-2 col-lg-2 col-x2-1 col-md-2">
-                <select id="estadoONG" name="estadoONG" class="form-control">
+                <select id="estadoONG" name="estadoONG" class="form-control" ng-model="ongCtrl.editOng.state">
                     <option>UF</option>
                     <option>SC</option>
                     <option>PR</option>
                 </select>
             </label>
             <label class="col-sm-3 col-lg-3 col-xl-3 col-md-3">
-                <select id="cidadeONG" name="cidadeONG" class="form-control">
+                <select id="cidadeONG" name="cidadeONG" class="form-control" ng-model="ongCtrl.editOng.city">
                     <option>Cidade</option>
                     <option>Joinville</option>
                     <option>Blumenau</option>
@@ -34,7 +34,7 @@
             </label>
             <div class="form-group col-sm-12 col-lg-12 col-xl-12 col-md-12">
                      <input type="text" id="description" name="description" class="form-control"
-                               ng-model="ongCtrl.newOng.description"
+                               ng-model="ongCtrl.editOng.description"
                                name="description" required="false">
                 <label class="form-control-placeholder" for="description">Descrição brévia da instituição</label>
             </div>
